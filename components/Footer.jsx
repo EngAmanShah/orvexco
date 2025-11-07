@@ -39,7 +39,7 @@ export default function Footer({ lang }) {
       faq: "الأسئلة الشائعة",
     },
     rightsReserved: "جميع الحقوق محفوظة.",
-    phone: "+966557828312",
+    phone: "966557828312",
     email: "abc@orvexco.com",
     location: "الجبيل الصناعية، شارع الملك فيصل بن عبدالعزيز، المملكة العربية السعودية",
   };
@@ -58,7 +58,7 @@ export default function Footer({ lang }) {
       faq: "FAQ",
     },
     rightsReserved: "All Rights Reserved.",
-    phone: "+966 55 993 1444",
+    phone: "966559931444",
     email: "abc@orvexco.com",
     location:
       "Jubail Industrial City, King Faisal Bin Abdulaziz Street, Saudi Arabia",
