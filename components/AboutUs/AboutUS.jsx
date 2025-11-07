@@ -79,110 +79,110 @@ import {
   // Translations
   const content = {
     en: {
-      heroTitle: "About BrandRaize",
+      heroTitle: "About ORVEXCO",
       heroSubtitle:
-        "Elevating brands above the noise with creativity, technology, and strategy.",
+        "Engineering Strength — Building the Future with Iron, Aluminum, and Solar Energy.",
       heroExtra:
-        "We believe the future of business lies at the intersection of innovation and creativity. From startups to enterprises, BrandRaize helps brands redefine how they connect, grow, and succeed in a digital-first world.",
+        "Orvexco is a multidisciplinary engineering and software solutions company that operates across industrial and digital sectors. With a strong foundation in innovation and reliability, we specialize in delivering end-to-end engineering, construction, IT, and digital transformation services.",
       history:
-        "BrandRaize was created to help brands grow stronger and shine brighter. Founded by Engr. Aman Shah — a multi-skilled professional in web and mobile development, graphic design, digital marketing, and IT solutions — BrandRaize is all about turning creative ideas into real results. We believe every brand has the power to rise, combining creativity, strategy, and technology to build modern websites, mobile apps, brand identities, and marketing campaigns that truly work. Our mission is simple — to raise your brand to its full potential. Whether you’re starting out or already established, BrandRaize is your trusted partner for clarity, creativity, and growth at every stage of your journey.",
-      servicesTitle: "Our Services",
-      storyHeading: "Our Story",
+        "Team Orvexco was established in the USA in 2009 as CIL, expanded to Kuwait in 2010 (officially registered in 2024), and further strengthened its presence in Saudi Arabia in 2025. With a strong engineering foundation and years of technical expertise, Orvexco has built a solid reputation for delivering innovative and reliable solutions in the construction, architectural, and digital sectors. Under the leadership of a new generation of engineers, Orvexco continues to evolve — focusing on modernization, sustainability, and excellence. Our mission is simple — to engineer progress, build trust, and empower clients with reliable technology and sustainable infrastructure.",
+      servicesTitle: "Our Expertise",
+      storyHeading: "Our Journey",
       buttons: {
-        mobile: "Mobile Apps",
-        web: "See Web Solutions",
-        marketing: "Explore Marketing",
-        design: "View Designs",
-        it: "Learn IT Solutions",
-        appDev: "App Development",
+        industry: "Industrial Solutions",
+        solar: "Solar Systems",
+        fabrication: "Fabrication Works",
+        project: "Project Management",
+        construction: "Construction Services",
+        digital: "Digital Solutions",
       },
     },
-    ar: {
-      heroTitle: "عن براندرايز",
+   ar: {
+      heroTitle: "عن أورفكسو",
       heroSubtitle:
-        "نرتقي بالعلامات التجارية فوق الضوضاء من خلال الإبداع والتكنولوجيا والاستراتيجية.",
+        "قوة الهندسة — نبني المستقبل من الحديد والألمنيوم والطاقة الشمسية.",
       heroExtra:
-        "نؤمن أن مستقبل الأعمال يكمن في دمج الابتكار مع الإبداع. من الشركات الناشئة إلى المؤسسات، تساعد براندرايز العلامات التجارية على إعادة تعريف كيفية النمو والنجاح في العالم الرقمي.",
+        "أورفكسو هي شركة متعددة التخصصات في مجالات الهندسة والبرمجيات، تعمل في القطاعات الصناعية والرقمية. بفضل أساسها القوي من الابتكار والموثوقية، تتخصص أورفكسو في تقديم خدمات متكاملة في الهندسة والبناء والتحول الرقمي.",
       history:
-        "تأسست براندرايز لمساعدة العلامات التجارية على النمو بقوة والتألق بتميز. أسسها المهندس أمان شاه — الخبير متعدد المهارات في تطوير الويب والتطبيقات، والتصميم الجرافيكي، والتسويق الرقمي، وحلول تكنولوجيا المعلومات — حيث تركز براندرايز على تحويل الأفكار الإبداعية إلى نتائج حقيقية. نحن نؤمن أن لكل علامة تجارية القدرة على الارتقاء، ولهذا نمزج بين الإبداع، والاستراتيجية، والتقنية لبناء مواقع حديثة، وتطبيقات متطورة، وهويات بصرية قوية، وحملات تسويقية فعالة. مهمتنا بسيطة — رفع علامتك التجارية إلى أقصى إمكاناتها. سواء كنت في بداية طريقك أو تمتلك مؤسسة راسخة، براندرايز هي شريكك الموثوق للوضوح والإبداع والنمو في كل مرحلة من رحلتك.",
-      servicesTitle: "خدماتنا",
-      storyHeading: "قصتنا",
+        "تأسس فريق أورفكسو في الولايات المتحدة الأمريكية عام 2009 باسم CIL، وتوسع إلى الكويت في عام 2010 (وسُجل رسميًا في عام 2024)، وعزز وجوده في المملكة العربية السعودية في عام 2025. بفضل خبراتها الهندسية القوية وسنوات من الكفاءة التقنية، بنت أورفكسو سمعة راسخة في تقديم حلول مبتكرة وموثوقة في مجالات البناء والهندسة المعمارية والخدمات الرقمية. تحت قيادة الجيل الجديد من المهندسين، تواصل أورفكسو التطور والتركيز على التحديث والاستدامة والتميز. مهمتنا بسيطة — هندسة التقدم، وبناء الثقة، وتمكين العملاء من خلال التكنولوجيا الموثوقة والبنية التحتية المستدامة.",
+      servicesTitle: "مجالات خبرتنا",
+      storyHeading: "رحلتنا",
       buttons: {
-        mobile: "تطبيقات الجوال",
-        web: "حلول الويب",
-        marketing: "التسويق الرقمي",
-        design: "تصميم جرافيك",
-        it: "تكنولوجيا المعلومات",
-        appDev: "تطوير التطبيقات",
+        industry: "الحلول الصناعية",
+        solar: "أنظمة الطاقة الشمسية",
+        fabrication: "أعمال التصنيع",
+        project: "إدارة المشاريع",
+        construction: "خدمات البناء",
+        digital: "الحلول الرقمية",
       },
     },
   };
 
   const t = content[currentLang];
 
-  const services = [
-    {
-      icon: <FaMobileAlt size={50} />,
-      title: { en: "Mobile App Development", ar: "تطوير تطبيقات الجوال" },
-      text: {
-        en: "Custom apps for iOS and Android.",
-        ar: "تطبيقات مخصصة لنظامي iOS و Android.",
-      },
-      link: "/service/mobileapp",
-      btnKey: "mobile",
+ const services = [
+  {
+    image: "/services/fire-door.gif",
+    title: { en: "Fire Rated Doors (Steel/Wood/Glass)", ar: "أبواب مقاومة للحريق (فولاذ / خشب / زجاج)" },
+    text: {
+      en: "Certified fire-rated doors designed for safety and durability in commercial and industrial applications.",
+      ar: "أبواب معتمدة مقاومة للحريق توفر الأمان والمتانة في البيئات التجارية والصناعية.",
     },
-    {
-      icon: <FaLaptopCode size={50} />,
-      title: { en: "Web Development", ar: "تطوير الويب" },
-      text: {
-        en: "Responsive websites for business success.",
-        ar: "مواقع ويب متجاوبة لنجاح أعمالك.",
-      },
-      link: "/service/webdev",
-      btnKey: "web",
+    link: "/service/firedoor",
+    btnKey: "industry",
+  },
+  {
+    image: "/services/fabric-door.gif",
+    title: { en: "High Speed Fabric Doors", ar: "أبواب قماشية عالية السرعة" },
+    text: {
+      en: "Fast, reliable, and durable fabric doors ideal for industrial environments requiring efficient access.",
+      ar: "أبواب سريعة وموثوقة مصممة لزيادة كفاءة الحركة في المصانع والمنشآت.",
     },
-    {
-      icon: <FaBullhorn size={50} />,
-      title: { en: "Digital Marketing", ar: "التسويق الرقمي" },
-      text: {
-        en: "Grow your brand online effectively.",
-        ar: "نمِّ علامتك التجارية رقمياً بفعالية.",
-      },
-      link: "/service/digitalmarketing",
-      btnKey: "marketing",
+    link: "/service/fabricdoor",
+    btnKey: "solar",
+  },
+  {
+    image: "/services/garage-door.gif",
+    title: { en: "Garage Doors", ar: "أبواب الجراج" },
+    text: {
+      en: "Strong, secure, and customizable garage doors for residential, commercial, and industrial spaces.",
+      ar: "أبواب قوية وآمنة وقابلة للتخصيص للمنازل والمنشآت التجارية والصناعية.",
     },
-    {
-      icon: <FaMobileAlt size={50} />, // or you can choose any other app-related icon you prefer
-      title: { en: "App Development", ar: "تطوير التطبيقات" },
-      text: {
-        en: "Build powerful and scalable mobile apps.",
-        ar: "بناء تطبيقات جوال قوية وقابلة للتوسع.",
-      },
-      link: "/service/appdevelopment",
-      btnKey: "appDev",
+    link: "/service/garagedoor",
+    btnKey: "fabrication",
+  },
+  {
+    image: "/services/rolling-shutter.gif",
+    title: { en: "Rolling Shutter Doors", ar: "أبواب الدحرجة المقاومة للحريق" },
+    text: {
+      en: "Fire-rated rolling shutters offering safety and performance for industrial and commercial use.",
+      ar: "أبواب دحرجة مقاومة للحريق توفر الأمان والأداء العالي للمشاريع الصناعية والتجارية.",
     },
+    link: "/service/rollingdoor",
+    btnKey: "project",
+  },
+  {
+    image: "/services/bullet-door.gif",
+    title: { en: "Bullet & Blast Resistant Doors", ar: "أبواب مقاومة للرصاص والانفجارات" },
+    text: {
+      en: "Advanced ballistic and blast-resistant doors providing maximum protection and reliability.",
+      ar: "أبواب متقدمة مقاومة للرصاص والانفجارات توفر أقصى درجات الحماية والموثوقية.",
+    },
+    link: "/service/bulletdoor",
+    btnKey: "construction",
+  },
+  {
+    image: "/services/steel-fabrication.gif",
+    title: { en: "Structural Steel Fabrication", ar: "تصنيع الهياكل الفولاذية" },
+    text: {
+      en: "Precision fabrication and installation of high-quality structural steel for all industrial projects.",
+      ar: "تصنيع دقيق للهياكل الفولاذية عالية الجودة لجميع المشاريع الصناعية.",
+    },
+    link: "/service/steelfab",
+    btnKey: "digital",
+  },
+];
 
-    {
-      icon: <FaPaintBrush size={50} />,
-      title: { en: "Graphic Design", ar: "تصميم جرافيك" },
-      text: {
-        en: "Creative visuals for your brand.",
-        ar: "تصاميم إبداعية لعلامتك التجارية.",
-      },
-      link: "/service/graphicdesign",
-      btnKey: "design",
-    },
-    {
-      icon: <FaServer size={50} />,
-      title: { en: "IT Solutions", ar: "حلول تقنية المعلومات" },
-      text: {
-        en: "Reliable IT services for enterprises.",
-        ar: "خدمات تقنية موثوقة للمؤسسات.",
-      },
-      link: "/service/itsolutions",
-      btnKey: "it",
-    },
-  ];
 
   return (
     <div className={styles.container}>
@@ -210,7 +210,7 @@ import {
             <p className={styles.storyParagraph}>{t.history}</p>
           </motion.div>
           <motion.div className={styles.storyImage}>
-            <img src="/aman.jpeg" alt="Our Story" />
+            <img src="/bg.webp" alt="Our Story" />
           </motion.div>
         </div>
       </section>

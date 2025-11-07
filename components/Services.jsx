@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import { FiVideo, FiSmartphone, FiServer } from "react-icons/fi";
 import { useEffect, useRef } from "react";
-import { MdOutlineMovie, MdOutlinePhoneIphone, MdOutlineBrush } from 'react-icons/md';
+import {
+  MdOutlineMovie,
+  MdOutlinePhoneIphone,
+  MdOutlineBrush,
+} from "react-icons/md";
 // 🌌 Particle Canvas Component
 function ParticleCanvas({ style }) {
   const canvasRef = useRef(null);
@@ -37,7 +41,7 @@ function ParticleCanvas({ style }) {
       ctx.fillStyle = "#001233";
       ctx.fillRect(0, 0, width, height);
 
-      particles.forEach(p => {
+      particles.forEach((p) => {
         p.x += p.vx;
         p.y += p.vy;
 
@@ -61,7 +65,20 @@ function ParticleCanvas({ style }) {
     return () => window.removeEventListener("resize", resize);
   }, []);
 
-  return <canvas ref={canvasRef} style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0, zIndex: 0, ...style }} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: 0,
+        ...style,
+      }}
+    />
+  );
 }
 
 // Map services to icons
@@ -91,7 +108,6 @@ const iconMap = {
   "تطبيقات الهواتف": <MdOutlinePhoneIphone size={50} />,
 };
 
-
 const containerVariants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.2 } },
@@ -102,9 +118,17 @@ const cardVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-export default function Services({ lang, servicesData, sectionTitle, sectionDescription }) {
+export default function Services({
+  lang,
+  servicesData,
+  sectionTitle,
+  sectionDescription,
+}) {
   return (
-    <section className="position-relative py-5" style={{ backgroundColor: "#001233" }}>
+    <section
+      className="position-relative py-5"
+      style={{ backgroundColor: "#001233" }}
+    >
       {/* Particle Canvas */}
       <ParticleCanvas />
 
@@ -112,8 +136,13 @@ export default function Services({ lang, servicesData, sectionTitle, sectionDesc
       <div className="container position-relative" style={{ zIndex: 1 }}>
         {/* Section Header */}
         <div className="text-center mb-5">
-          <h2 className="fs-2 text-white" style={{ fontWeight: "600" }}>{sectionTitle}</h2>
-          <p className="text-white w-md-75 mx-auto" style={{ fontSize: "18px" }}>
+          <h2 className="fs-2 text-white" style={{ fontWeight: "600" }}>
+            {sectionTitle}
+          </h2>
+          <p
+            className="text-white w-md-75 mx-auto"
+            style={{ fontSize: "18px" }}
+          >
             {sectionDescription}
           </p>
         </div>
@@ -127,41 +156,53 @@ export default function Services({ lang, servicesData, sectionTitle, sectionDesc
           viewport={{ once: true, amount: 0.2 }}
         >
           {servicesData.map((service, idx) => (
-            <motion.div key={idx} className="col-12 col-md-6 col-lg-4" variants={cardVariants}>
+            <motion.div
+              key={idx}
+              className="col-12 col-md-6 col-lg-4"
+              variants={cardVariants}
+            >
               <motion.div
-  whileHover={{ y: -10 }}
-  className="service-card p-4 h-100 d-flex flex-column align-items-center text-center"
-  style={{
-    background: "rgba(255, 255, 255, 0.05)",       // semi-transparent for glass effect
-    backdropFilter: "blur(10px)",                 // blur background
-    WebkitBackdropFilter: "blur(10px)",           // Safari support
-    border: "1px solid rgba(255,255,255,0.2)",   // subtle border
-    borderRadius: "16px",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.05)",    
-    cursor: "pointer",
-    overflow: "hidden",
-    color: "white",
-  }}
->
-
-              
+                whileHover={{ y: -10 }}
+                className="service-card p-4 h-100 d-flex flex-column align-items-center text-center"
+                style={{
+                  background: "rgba(255, 255, 255, 0.05)", // semi-transparent for glass effect
+                  backdropFilter: "blur(10px)", // blur background
+                  WebkitBackdropFilter: "blur(10px)", // Safari support
+                  border: "1px solid rgba(255,255,255,0.2)", // subtle border
+                  borderRadius: "16px",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.05)",
+                  cursor: "pointer",
+                  overflow: "hidden",
+                  color: "white",
+                }}
+              >
                 {/* Icon */}
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}
-                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 4,
+                    ease: "easeInOut",
+                  }}
                   className="mb-3"
                 >
                   {iconMap[service.title] || (
                     <img
                       src={service.image}
                       alt={service.title}
-                      style={{ width: "80px", height: "80px", objectFit: "contain" }}
+                      style={{
+                        width: "80px",
+                        height: "80px",
+                        objectFit: "contain",
+                      }}
                     />
                   )}
                 </motion.div>
 
                 {/* Text */}
-                <h5 className="mb-2 text-white" style={{ fontWeight: "600" }}>{service.title}</h5>
+                <h5 className="mb-2 text-white" style={{ fontWeight: "600" }}>
+                  {service.title}
+                </h5>
                 <p className="text-white">{service.description}</p>
               </motion.div>
             </motion.div>
@@ -174,7 +215,7 @@ export default function Services({ lang, servicesData, sectionTitle, sectionDesc
           transition: transform 0.3s, box-shadow 0.3s;
         }
         .service-card:hover {
-          box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
       `}</style>
     </section>

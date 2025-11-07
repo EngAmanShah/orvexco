@@ -90,54 +90,55 @@ function ParticleCanvas() {
 export default function Market({ lang }) {
   const [activeTab, setActiveTab] = useState(1);
 
-  const translations = {
-    en: {
-      headerTitle: "Why is BrandRaize a Market Leader?",
-      headerDesc:
-        "BrandRaize Company provides innovative solutions in programming websites, applications, and digital marketing, making us your first choice in the industry.",
-      tabs: [
-        {
-          title: "Professional Developer Team",
-          description:
-            "Our team of expert developers delivers high-quality, scalable solutions tailored to your business needs.",
-        },
-        {
-          title: "Outstanding User Experience",
-          description:
-            "We focus on delivering a smooth and enjoyable user experience through modern designs and intuitive interfaces.",
-        },
-        {
-          title: "Effective Marketing Strategies",
-          description:
-            "Our marketing strategies are data-driven and designed to maximize growth and ROI for your business.",
-        },
-      ],
-      cta: "Find out more about BrandRaize",
-    },
-    ar: {
-      headerTitle: "لماذا تُعتبر براند رايز رائدة في السوق؟",
-      headerDesc:
-        "تقدم شركة BrandRaize حلولًا مبتكرة في برمجة المواقع والتطبيقات والتسويق الرقمي، مما يجعلنا خيارك الأول في هذا المجال.",
-      tabs: [
-        {
-          title: "فريق مطورين محترف",
-          description:
-            "يقدم فريقنا من المطورين الخبراء حلولاً عالية الجودة وقابلة للتوسع مصممة خصيصًا لتلبية احتياجات عملك.",
-        },
-        {
-          title: "تجربة مستخدم ممتازة",
-          description:
-            "نركز على تقديم تجربة مستخدم سلسة وممتعة من خلال تصاميم حديثة وواجهات بديهية.",
-        },
-        {
-          title: "استراتيجيات تسويق فعّالة",
-          description:
-            "استراتيجياتنا التسويقية قائمة على البيانات ومصممة لتعظيم النمو والعائد على الاستثمار لعملك.",
-        },
-      ],
-      cta: "اكتشف المزيد عن براند رايز",
-    },
-  };
+const translations = {
+  en: {
+    headerTitle: "About Orvexco",
+    headerDesc:
+      "Team Orvexco was established in the USA in 2009 as CIL, expanded to Kuwait in 2010 (officially registered in 2024), and further strengthened its presence in Saudi Arabia in 2025. With a strong engineering foundation and years of technical expertise, Team Orvexco has built a solid reputation for delivering innovative and reliable solutions in the construction and architectural sectors.",
+    tabs: [
+      {
+        title: "Mr. Abdul Aziz Al Mhan",
+        description:
+          "An entrepreneur with strategic vision and experience in the iron, aluminum, and solar energy sectors. He aims to lead high-quality industrial projects that contribute to infrastructure development and enhance the renewable energy sector, while adhering to global standards and best business practices. He focuses on developing innovative solutions that meet market needs and keep pace with industrial advancements.",
+      },
+      {
+        title: "Eng. Chakola",
+        description:
+          "Has extensive experience of over 40 years in Kuwait’s construction and related industries. He has helped establish turnkey manufacturing centers such as Steel, Door, Joinery, and PU Foam factories. His leadership and expertise made him a trusted consultant providing technological solutions to major industries in Kuwait and the GCC.",
+      },
+      {
+        title: "Our Expertise",
+        description:
+          "At Team Orvexco, we excel in precision fabrication, delivering high-quality structural steel solutions on time, every time. Our expertise ensures seamless project execution while maintaining exceptional standards. Trust us to bring your vision to life with commitment and excellence.",
+      },
+    ],
+    cta: "Learn more about Orvexco",
+  },
+  ar: {
+    headerTitle: "نبذة عن أورفكسو",
+    headerDesc:
+      "تأسست شركة أورفكسو في الولايات المتحدة الأمريكية عام 2009 تحت اسم CIL، وتوسعت إلى الكويت في عام 2010 (وسُجلت رسميًا في عام 2024)، كما عززت حضورها في المملكة العربية السعودية في عام 2025. بفضل أسسها الهندسية القوية وخبرتها الفنية الطويلة، بنت أورفكسو سمعة قوية في تقديم حلول مبتكرة وموثوقة في مجالات البناء والهندسة المعمارية.",
+    tabs: [
+      {
+        title: "السيد عبدالعزيز المهن",
+        description:
+          "رائد أعمال يتمتع برؤية استراتيجية وخبرة عملية في قطاعات الحديد والألمنيوم والطاقة الشمسية. يسعى إلى قيادة مشاريع صناعية عالية الجودة تساهم في تطوير البنية التحتية وتعزيز قطاع الطاقة المتجددة، مع الالتزام بالمعايير العالمية وأفضل الممارسات. يركز على تطوير حلول مبتكرة تلبي احتياجات السوق وتواكب التقدم الصناعي.",
+      },
+      {
+        title: "المهندس شاكونا",
+        description:
+          "يمتلك خبرة تمتد لأكثر من 40 عامًا في مجال البناء والصناعات المرتبطة به في الكويت، حيث ساهم في إنشاء مصانع متكاملة مثل مصانع الحديد والأبواب والنجارة والفوم. بفضل قيادته وخبرته، أصبح مستشارًا موثوقًا يقدم الحلول التقنية للشركات الرائدة في الكويت ودول مجلس التعاون الخليجي.",
+      },
+      {
+        title: "خبراتنا",
+        description:
+          "في أورفكسو، نتميز بالدقة في التصنيع ونقدم حلولًا هيكلية عالية الجودة تُنفّذ في الوقت المحدد. يضمن فريقنا تنفيذ المشاريع بسلاسة مع الحفاظ على أعلى المعايير. ثق بنا لتحقيق رؤيتك بالجودة والالتزام والتميز.",
+      },
+    ],
+    cta: "اكتشف المزيد عن أورفكسو",
+  },
+};
+
 
   const t = translations[lang] || translations.en; // default to English
 

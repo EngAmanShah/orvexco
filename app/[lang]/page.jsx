@@ -13,156 +13,173 @@ export default async function Home({ params }) {
   const resolvedParams = await params;
   const { lang } = resolvedParams;
 
-  const content = {
-    en: {
-      heroTitle: "Elevating Brands Above the Noise",
-      heroDescription:
-        "Brandraize is a creative digital agency led by Engr. Aman Shah. We specialize in digital marketing, web & app development, branding, and IT solutions to help businesses grow with measurable impact.",
-      shopNow: "Get a Free Consultation",
-      whyChooseTitle: "Why Choose Brandraize",
-      whyChooseDescription:
-        "We deliver results-driven solutions across industries, helping businesses achieve sustainable growth and brand recognition.",
-      features: [
-        {
-          title: "Creative & Strategic",
-          description:
-            "Our work combines design innovation with data-driven strategies to maximize impact.",
-        },
-        {
-          title: "Multi-Industry Expertise",
-          description:
-            "We have proven experience across technology, real estate, retail, healthcare, and more.",
-        },
-        {
-          title: "Bilingual & Global Reach",
-          description:
-            "We craft solutions in both English and Arabic, enabling global accessibility.",
-        },
-        {
-          title: "Results-Driven",
-          description:
-            "Every project is designed to deliver measurable growth and tangible ROI.",
-        },
-      ],
-      discoverTitle: "Discover Our Services",
-      discoverDescription:
-        "We provide a full spectrum of creative and digital services to help your brand grow.",
-      services: [
-        {
-          title: "Digital Marketing",
-          image: "/services/digital.gif",
-          description:
-            "A complete range of digital marketing solutions — SEO, social media, ads, and more.",
-        },
-        {
-          title: "Application Development",
-          image: "/services/app-development.gif",
-          description:
-            "Custom web apps and enterprise portals built for performance and scalability.",
-        },
-        {
-          title: "Graphic Design",
-          image: "/services/graphic-design.gif",
-          description:
-            "High-quality branding and visuals — from logos to full identity systems.",
-        },
-        {
-          title: "Video & Animation",
-          image: "/services/video-animation.gif",
-          description:
-            "Engaging videos, motion graphics, and animations that bring ideas to life.",
-        },
-        {
-          title: "Information Technology",
-          image: "/services/it.gif",
-          description:
-            "End-to-end IT consulting and infrastructure support for modern businesses.",
-        },
-        {
-          title: "Mobile App Development",
-          image: "/services/mobile-app.gif",
-          description:
-            "Cross-platform iOS and Android apps with seamless UX and strong performance.",
-        },
-      ],
-   
+const content = {
+  en: {
+    heroTitle: "Engineering Strength, Building the Future",
+    heroDescription:
+      "Team Orvexco was established in the USA in 2009 as CIL, expanded to Kuwait in 2010, and officially registered in 2024. The company further strengthened its presence in Saudi Arabia in 2025, delivering innovative and reliable engineering solutions across the construction and architectural sectors.",
+    shopNow: "Contact Us",
+    whyChooseTitle: "Why Choose ORVEXCO",
+    whyChooseDescription:
+      "We combine experience with innovation to redefine industry standards through quality workmanship, advanced design, and customer-focused excellence.",
+    features: [
+      {
+        title: "Experienced Leadership",
+        description:
+          "Led by Mr. Abdul Aziz Al Mhan and Eng. Chakola, bringing decades of expertise in industrial, aluminum, and solar energy sectors.",
+      },
+      {
+        title: "Quality & Efficiency",
+        description:
+          "We ensure every project meets global standards with a strong focus on quality, efficiency, and sustainability.",
+      },
+      {
+        title: "Comprehensive Solutions",
+        description:
+          "From fire-rated openings to structural steel fabrication, we deliver end-to-end industrial solutions.",
+      },
+      {
+        title: "Global Reach",
+        description:
+          "With operations in the USA, Kuwait, and Saudi Arabia, ORVEXCO serves clients across 15+ countries.",
+      },
+    ],
+    discoverTitle: "Our Core Services",
+    discoverDescription:
+      "ORVEXCO delivers a wide range of industrial and construction solutions designed for safety, strength, and precision.",
+    services: [
+      {
+        title: "Fire Rated Doors (Steel/Wood/Glass)",
+        image: "/fire-door.png",
+        description:
+          "Certified fire-rated doors designed for safety and durability in commercial and industrial applications.",
+      },
+      {
+        title: "High Speed Fabric Doors",
+        image: "/fabric-door.png",
+        description:
+          "Fast, reliable, and durable fabric doors ideal for industrial environments requiring efficient access.",
+      },
+      {
+        title: "Garage Doors",
+        image: "/garage-door.png",
+        description:
+          "Strong, secure, and customizable garage doors for residential, commercial, and industrial spaces.",
+      },
+      {
+        title: "Rolling Shutter Doors",
+        image: "/rolling-shutter.png",
+        description:
+          "Fire-rated rolling shutters offering safety and performance for industrial and commercial use.",
+      },
+      {
+        title: "Bullet & Blast Resistant Doors",
+        image: "/bullet-door.png",
+        description:
+          "Advanced ballistic and blast-resistant doors providing maximum protection and reliability.",
+      },
+      {
+        title: "Structural Steel Fabrication",
+        image: "/steel-fabrication.jpg",
+        description:
+          "Precision fabrication and installation of high-quality structural steel for all industrial projects.",
+      },
+    ],
+    stats: {
+      years: "15+ Years of Excellence",
+      projects: "800+ Completed Projects",
+      countries: "15+ Countries Served",
+      workshops: "50,000㎡ across 4 workshops",
     },
-    ar: {
-      heroButton: "تواصل معنا",
-      // heroTitle: "نرتقي بالعلامات التجارية فوق الضوضاء",
-      heroTitle:"براندرايز",
-      heroDescription:
-        "براندرايز هي وكالة إبداعية بقيادة . نحن متخصصون في التسويق الرقمي، تطوير المواقع والتطبيقات، تصميم الهوية البصرية، وحلول تكنولوجيا المعلومات لمساعدة الشركات على النمو وتحقيق تأثير ملموس.",
-      shopNow: "احصل على استشارة مجانية",
-      whyChooseTitle: "لماذا تختار براندرايز",
-      whyChooseDescription:
-        "نقدم حلولاً قائمة على النتائج عبر مختلف الصناعات لمساعدة الشركات على تحقيق نمو مستدام وبناء هوية قوية.",
-      features: [
-        {
-          title: "إبداع واستراتيجية",
-          description:
-            "نمزج بين الابتكار في التصميم والاستراتيجيات المدعومة بالبيانات لتحقيق أقصى تأثير.",
-        },
-        {
-          title: "خبرة متعددة المجالات",
-          description:
-            "لدينا خبرة مثبتة في التكنولوجيا، العقارات، التجزئة، الرعاية الصحية وغيرها.",
-        },
-        {
-          title: "ثنائي اللغة وعالمي",
-          description:
-            "نُنشئ حلولاً باللغتين العربية والإنجليزية لتوسيع الوصول العالمي.",
-        },
-        {
-          title: "نتائج ملموسة",
-          description:
-            "كل مشروع نصممه يركز على تحقيق نمو قابل للقياس وعائد استثمار ملموس.",
-        },
-      ],
-      discoverTitle: "اكتشف خدماتنا",
-      discoverDescription:
-        "نقدم مجموعة شاملة من الخدمات الرقمية والإبداعية لمساعدة علامتك التجارية على النمو.",
-      services: [
-        {
-          title: "التسويق الرقمي",
-          image: "/services/digital.gif",
-          description:
-            "حلول تسويق رقمي متكاملة — SEO، وسائل التواصل، الإعلانات والمزيد.",
-        },
-        {
-          title: "تطوير التطبيقات",
-          image: "/services/app-development.gif",
-          description:
-            "تطبيقات ويب متقدمة وبوابات مؤسسية عالية الأداء وقابلة للتوسع.",
-        },
-        {
-          title: "التصميم الجرافيكي",
-          image: "/services/graphic-design.gif",
-          description:
-            "هوية بصرية عالية الجودة — من الشعارات إلى أنظمة الهوية الكاملة.",
-        },
-        {
-          title: "الفيديو والأنيميشن",
-          image: "/services/video-animation.gif",
-          description:
-            "مقاطع فيديو ورسوم متحركة تجذب الانتباه وتبني الثقة.",
-        },
-        {
-          title: "تكنولوجيا المعلومات",
-          image: "/services/it.gif",
-          description:
-            "استشارات تقنية شاملة ودعم للبنية التحتية للشركات.",
-        },
-        {
-          title: "تطبيقات الهواتف",
-          image: "/services/mobile-app.gif",
-          description:
-            "تطبيقات iOS و Android بواجهة مستخدم سلسة وأداء قوي.",
-        },
-      ],
-   
+    contact: {
+      email: "abc@orvexco.com",
+      phone: "055 993 1444",
     },
-  };
+  },
+
+  ar: {
+    heroTitle: "قوة هندسية تبني المستقبل",
+    heroDescription:
+      "تأسست شركة أورفكسو في الولايات المتحدة عام 2009 باسم CIL، وتوسعت إلى الكويت في عام 2010، وتم تسجيلها رسميًا في عام 2024، كما عززت وجودها في المملكة العربية السعودية في عام 2025. تقدم الشركة حلولًا هندسية مبتكرة وموثوقة في مجالات البناء والعمارة.",
+    shopNow: "تواصل معنا",
+    whyChooseTitle: "لماذا تختار أورفكسو",
+    whyChooseDescription:
+      "نجمع بين الخبرة والابتكار لإعادة تعريف معايير الصناعة من خلال الجودة العالية، والتصميم المتقدم، والتميز في خدمة العملاء.",
+    features: [
+      {
+        title: "قيادة ذات خبرة",
+        description:
+          "بقيادة السيد عبد العزيز المحن والمهندس تشاكولا، بخبرة تمتد لعقود في مجالات الحديد والألمنيوم والطاقة الشمسية.",
+      },
+      {
+        title: "الجودة والكفاءة",
+        description:
+          "نلتزم بالمعايير العالمية مع التركيز على الجودة، الكفاءة، والاستدامة في جميع المشاريع.",
+      },
+      {
+        title: "حلول شاملة",
+        description:
+          "من الأبواب المقاومة للحريق إلى تصنيع الهياكل الفولاذية — نقدم حلولاً صناعية متكاملة.",
+      },
+      {
+        title: "انتشار عالمي",
+        description:
+          "بعمليات في الولايات المتحدة والكويت والمملكة العربية السعودية، نخدم عملاء في أكثر من 15 دولة.",
+      },
+    ],
+    discoverTitle: "خدماتنا الأساسية",
+    discoverDescription:
+      "تقدم أورفكسو مجموعة واسعة من الحلول الصناعية والإنشائية المصممة لتحقيق الأمان والدقة العالية.",
+    services: [
+      {
+        title: "أبواب مقاومة للحريق (فولاذ / خشب / زجاج)",
+        image: "/fire-door.png",
+        description:
+          "أبواب معتمدة مقاومة للحريق توفر الأمان والمتانة في البيئات التجارية والصناعية.",
+      },
+      {
+        title: "أبواب قماشية عالية السرعة",
+        image: "/fabric-door.png",
+        description:
+          "أبواب سريعة وموثوقة مصممة لزيادة كفاءة الحركة في المصانع والمنشآت.",
+      },
+      {
+        title: "أبواب الجراج",
+        image: "/garage-door.png",
+        description:
+          "أبواب قوية وآمنة وقابلة للتخصيص للمنازل والمنشآت التجارية والصناعية.",
+      },
+      {
+        title: "أبواب الدحرجة المقاومة للحريق",
+        image: "/rolling-shutter.png",
+        description:
+          "أبواب دحرجة مقاومة للحريق توفر الأمان والأداء العالي للمشاريع الصناعية والتجارية.",
+      },
+      {
+        title: "أبواب مقاومة للرصاص والانفجارات",
+        image: "/bullet-door.png",
+        description:
+          "أبواب متقدمة مقاومة للرصاص والانفجارات توفر أقصى درجات الحماية والموثوقية.",
+      },
+      {
+        title: "تصنيع الهياكل الفولاذية",
+        image: "/steel-fabrication.jpg",
+        description:
+          "تصنيع دقيق للهياكل الفولاذية عالية الجودة لجميع المشاريع الصناعية.",
+      },
+    ],
+    stats: {
+      years: "15+ سنة من التميز",
+      projects: "800+ مشروع مكتمل",
+      countries: "15+ دولة حول العالم",
+      workshops: "50,000㎡ عبر 4 ورش عمل",
+    },
+    contact: {
+      email: "abc@orvexco.com",
+      phone: "055 993 1444",
+    },
+  },
+};
 
   const {
     heroTitle,

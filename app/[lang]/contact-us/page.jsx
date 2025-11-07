@@ -4,17 +4,18 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const metaContent = {
-    en: {
-      title: "BrandRaize ",
-      description:
-        "Get in touch with BrandRaize for questions, feedback, or just to say hello. We're here to help!",
-    },
-    ar: {
-      title: "تواصل معنا ",
-      description:
-        "تواصل مع هابي فيس لأي استفسارات أو ملاحظات أو حتى للتحية. نحن هنا لمساعدتك!",
-    },
-  };
+  en: {
+    title: "Contact ORVEXCO",
+    description:
+      "Get in touch with ORVEXCO for inquiries, partnerships, or service information. Our team is ready to assist you with engineering, construction, and industrial solutions across Saudi Arabia, Kuwait, and beyond.",
+  },
+  ar: {
+    title: "تواصل مع أورفكسو",
+    description:
+      "تواصل مع أورفكسو للاستفسارات أو الشراكات أو للحصول على معلومات حول خدماتنا. فريقنا جاهز لمساعدتك في الحلول الهندسية والإنشائية والصناعية في المملكة العربية السعودية والكويت وخارجها.",
+  },
+};
+
 
   const { title, description } = metaContent[lang] || metaContent.en;
   const baseUrl = "https://brandraize.com";

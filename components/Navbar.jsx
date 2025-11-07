@@ -28,24 +28,24 @@ export default function Navbar({ lang }) {
     {
       href: "/service",
       label: lang === "ar" ? "الخدمات" : "Services",
-      children: [
-        { href: "/service/webdev", label: lang === "ar" ? "تطوير المواقع" : "Web Development" },
-        { href: "/service/appdev", label: lang === "ar" ? "تطوير التطبيقات" : "App Development" },
-        { href: "/service/itsolutions", label: lang === "ar" ? "حلول تكنولوجيا المعلومات" : "IT Solutions" },
-        { href: "/service/digital-marketing", label: lang === "ar" ? "التسويق الرقمي" : "Digital Marketing" },
-        { href: "/service/graphic-design", label: lang === "ar" ? "التصميم الجرافيكي" : "Graphic Designing" },
-        { href: "/service/mobile-app", label: lang === "ar" ? "تطوير تطبيقات الهاتف" : "Mobile App Development" },
-      ],
+      // children: [
+      //   { href: "/service/webdev", label: lang === "ar" ? "تطوير المواقع" : "Web Development" },
+      //   { href: "/service/appdev", label: lang === "ar" ? "تطوير التطبيقات" : "App Development" },
+      //   { href: "/service/itsolutions", label: lang === "ar" ? "حلول تكنولوجيا المعلومات" : "IT Solutions" },
+      //   { href: "/service/digital-marketing", label: lang === "ar" ? "التسويق الرقمي" : "Digital Marketing" },
+      //   { href: "/service/graphic-design", label: lang === "ar" ? "التصميم الجرافيكي" : "Graphic Designing" },
+      //   { href: "/service/mobile-app", label: lang === "ar" ? "تطوير تطبيقات الهاتف" : "Mobile App Development" },
+      // ],
     },
     { href: "/about-us", label: lang === "ar" ? "من نحن" : "About Us" },
     { href: "/contact-us", label: lang === "ar" ? "اتصل بنا" : "Contact Us" },
-    { href: "/blog", label: lang === "ar" ? "المدونة" : "Blog" },
+    // { href: "/blog", label: lang === "ar" ? "المدونة" : "Blog" },
   ];
 
   if (!pathname || pathname?.startsWith(`/${lang}/admin`)) return null;
 
-  const whatsappNumber = "+966551981751";
-  const callNumber = "+966551981751";
+  const whatsappNumber = "+966559931444";
+  const callNumber = "+966559931444";
 
   // Function to close offcanvas programmatically
   const closeOffcanvas = () => {

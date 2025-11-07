@@ -1,23 +1,24 @@
+// app/[lang]/about/page.jsx
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const { lang } = resolvedParams;
 
   const metas = {
     en: {
-      title: "Frequently Asked Questions | BrandRaize",
+      title: "About Orvexco | Engineering Strength, Building the Future",
       description:
-        "Find answers to the most common questions about our software services and solutions.",
+        "Learn about Orvexco’s mission, leadership, and high-quality services across engineering, industrial, and renewable energy sectors.",
     },
     ar: {
-      title: "الأسئلة المتكررة | براندرايز",
+      title: "عن أورفكسو | القوة الهندسية وبناء المستقبل",
       description:
-        "اعثر على إجابات لأكثر الأسئلة شيوعًا حول خدمات وحلول براندرايز للبرمجيات.",
+        "تعرّف على رؤية أورفكسو وقيادتها وخدماتها عالية الجودة في مجالات الهندسة والطاقة المتجددة والتصنيع الصناعي.",
     },
   };
 
   const meta = metas[lang] || metas.en;
-  const baseUrl = "https://brandraize.com";
-  const canonicalUrl = `${baseUrl}/${lang}/faq`;
+  const baseUrl = "https://orvexco.com";
+  const canonicalUrl = `${baseUrl}/${lang}/about`;
 
   return {
     title: meta.title,
@@ -25,8 +26,8 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${baseUrl}/en/faq`,
-        ar: `${baseUrl}/ar/faq`,
+        en: `${baseUrl}/en/about`,
+        ar: `${baseUrl}/ar/about`,
       },
     },
     openGraph: {
@@ -43,181 +44,86 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function FAQs({ params }) {
+export default async function About({ params }) {
   const resolvedParams = await params;
   const { lang } = resolvedParams;
 
-  const faqsEn = [
-    {
-      question: "What is BrandRaize?",
-      answer:
-        "BrandRaize is a software company based in Saudi Arabia, helping businesses worldwide with digital transformation and custom software solutions.",
-    },
-    {
-      question: "How much experience does BrandRaize have?",
-      answer:
-        "We have over 5 years of experience delivering impactful software products and digital services.",
-    },
-    {
-      question: "What services do you offer?",
-      answer:
-        "We specialize in custom software development, web and mobile applications, UI/UX design, and cloud solutions.",
-    },
-    {
-      question: "Do you work with international clients?",
-      answer:
-        "Yes, we work remotely with clients all over the world.",
-    },
-    {
-      question: "Do you provide support after project delivery?",
-      answer:
-        "Yes, we offer continuous support and maintenance packages to ensure your software runs smoothly.",
-    },
-    {
-      question: "Which technologies do you use?",
-      answer:
-        "We work with modern stacks like React, Next.js, Node.js, Python, and cloud platforms like AWS and Firebase.",
-    },
-    {
-      question: "How can I get started?",
-      answer:
-        "You can contact us through our website to discuss your project requirements and schedule a consultation.",
-    },
-  ];
-
-  const faqsAr = [
-    {
-      question: "ما هي براندرايز؟",
-      answer:
-        "براندرايز هي شركة برمجيات مقرها في السعودية، تساعد الشركات حول العالم في التحول الرقمي وتطوير البرمجيات المخصصة.",
-    },
-    {
-      question: "ما هي خبرة براندرايز؟",
-      answer: "لدينا أكثر من ٥ سنوات من الخبرة في تقديم منتجات برمجية وحلول رقمية مؤثرة.",
-    },
-    {
-      question: "ما هي الخدمات التي تقدمونها؟",
-      answer:
-        "نحن متخصصون في تطوير البرمجيات المخصصة، وتطبيقات الويب والجوال، وتصميم واجهات وتجربة المستخدم، والحلول السحابية.",
-    },
-    {
-      question: "هل تعملون مع عملاء دوليين؟",
-      answer:
-        "نعم، نحن نعمل عن بُعد مع عملاء في جميع أنحاء العالم.",
-    },
-    {
-      question: "هل تقدمون دعمًا بعد تسليم المشروع؟",
-      answer:
-        "نعم، نقدم حزم دعم وصيانة مستمرة لضمان تشغيل برمجياتكم بسلاسة.",
-    },
-    {
-      question: "ما هي التقنيات التي تستخدمونها؟",
-      answer:
-        "نستخدم تقنيات حديثة مثل React و Next.js و Node.js و Python، بالإضافة إلى منصات سحابية مثل AWS و Firebase.",
-    },
-    {
-      question: "كيف يمكنني البدء؟",
-      answer:
-        "يمكنك التواصل معنا عبر موقعنا الإلكتروني لمناقشة متطلبات مشروعك وتحديد موعد للاستشارة.",
-    },
-  ];
-
-  const faqs = lang === "ar" ? faqsAr : faqsEn;
-
   return (
     <>
-      <div className="py-5" style={{ backgroundColor: "#52a9ff" }}>
+      <div className="py-5" style={{ backgroundColor: "#007bff" }}>
         <div className="container d-flex flex-column align-items-center text-white">
           <h1 className="text-center mb-3" style={{ fontWeight: "700" }}>
-            {lang === "ar" ? "الأسئلة المتكررة" : "Frequently Asked Questions"}
+            {lang === "ar" ? "عن أورفكسو" : "About Orvexco"}
           </h1>
           <p
             className="text-center w-md-75"
             dir={lang === "ar" ? "rtl" : "ltr"}
           >
             {lang === "ar"
-              ? "هنا ستجد إجابات لأكثر الأسئلة شيوعًا حول خدمات براندرايز للبرمجيات. إذا كان لديك أي أسئلة أخرى، لا تتردد في الاتصال بنا."
-              : "Here you can find answers to the most common questions about BrandRaize software services. If you have any other questions, feel free to contact us."}
+              ? "تعرف على تاريخ أورفكسو وقيادتها ورؤيتها في تقديم حلول هندسية وصناعية متقدمة."
+              : "Learn about Orvexco’s history, leadership, and its vision for delivering advanced engineering and industrial solutions."}
           </p>
         </div>
       </div>
-      <div className="container py-5 lh-lg">
-        {faqs.map((faq, index) => (
-          <details key={index} open={false}>
-            <summary>
-              <div className="faq-summary-content">
-                <div className="faq-index primary-bg">{index + 1}</div>
-                {faq.question}
-              </div>
-              <span className="icon plus text-secondary">+</span>
-              <span className="icon minus text-secondary">-</span>
-            </summary>
-            <p>{faq.answer}</p>
-          </details>
-        ))}
+
+      <div className="container py-5 lh-lg" dir={lang === "ar" ? "rtl" : "ltr"}>
+        <section className="mb-5">
+          <h2 className="mb-3 fw-bold">
+            {lang === "ar" ? "من نحن" : "Who We Are"}
+          </h2>
+          <p>
+            {lang === "ar"
+              ? "تأسست أورفكسو في الولايات المتحدة الأمريكية عام 2009 باسم CIL، وتوسعت إلى الكويت في عام 2010 (مسجلة رسميًا في 2024) وعززت وجودها في المملكة العربية السعودية في عام 2025. مع أساس هندسي قوي وخبرة تقنية واسعة، بنت أورفكسو سمعة قوية في تقديم حلول مبتكرة وموثوقة في قطاعات البناء والهندسة المعمارية. واليوم، تحت قيادة الجيل الجديد، تواصل الشركة النمو برؤية حديثة تركز على الاستدامة والتطور الصناعي."
+              : "Team Orvexco was established in the USA in 2009 as CIL, expanded to Kuwait in 2010 (officially registered in 2024), and further strengthened its presence in Saudi Arabia in 2025. With a strong engineering foundation and years of technical expertise, Team Orvexco has built a solid reputation for delivering innovative and reliable solutions in the construction and architectural sectors. Now, under the leadership of a young generation, the company continues to grow with a vision for modernization and sustainability."}
+          </p>
+        </section>
+
+        <section className="mb-5">
+          <h2 className="mb-3 fw-bold">
+            {lang === "ar" ? "القيادة" : "Leadership"}
+          </h2>
+
+          <h4 className="fw-semibold mt-4">Mr. Abdul Aziz Al Mhan</h4>
+          <p>
+            {lang === "ar"
+              ? "يركز السيد عبد العزيز المهان على قطاعات الحديد والألمنيوم والطاقة الشمسية. يهدف إلى قيادة مشاريع صناعية عالية الجودة تساهم في تطوير البنية التحتية وتعزيز قطاع الطاقة المتجددة، مع الالتزام بالمعايير العالمية وأفضل الممارسات. كما يولي أهمية كبيرة لتطوير حلول مبتكرة تلبي احتياجات السوق وتواكب التطورات الصناعية، مع التركيز على الجودة والكفاءة والاستدامة في كل مرحلة."
+              : "Mr. Abdul Aziz focuses on the iron, aluminum, and solar energy sectors. He aims to lead high-quality industrial projects that contribute to infrastructure development and enhance the renewable energy sector while adhering to global standards and best business practices. He places great importance on developing innovative solutions that meet market needs and keep pace with industrial advancements, focusing on quality, efficiency, and sustainability at every stage of the process."}
+          </p>
+
+          <h4 className="fw-semibold mt-4">Eng. Chakola</h4>
+          <p>
+            {lang === "ar"
+              ? "يمتلك المهندس شاكيولا خبرة واسعة تمتد لأكثر من 40 عامًا في الكويت في مجال البناء والصناعات المرتبطة به. ساهم في إنشاء مصانع متكاملة مثل مصانع الحديد، الأبواب، النجارة، الأثاث، والإسفنج الصناعي. بفضل خبرته الواسعة وقيادته، تم اختياره كمستشار محلي لشركات دولية تقدم حلولًا تكنولوجية رائدة في الكويت ودول مجلس التعاون الخليجي."
+              : "Eng. Chakola has gained extensive experience in Kuwait, spanning over 40 years in the construction and manufacturing industries. He has helped establish turnkey manufacturing centers such as steel factories, door factories, joinery and carpentry workshops, and PU foam plants. His expertise and leadership have made him a trusted consultant for international companies providing technological solutions to leading industries in Kuwait and the GCC region."}
+          </p>
+        </section>
+
+        <section>
+          <h2 className="mb-3 fw-bold">
+            {lang === "ar" ? "خدماتنا" : "Our Services"}
+          </h2>
+          <ul>
+            <li>Fire Rated Doors (Steel / Wood / Glass)</li>
+            <li>High-Speed Fabric Doors</li>
+            <li>Garage Doors</li>
+            <li>Fire Rated Rolling Shutters</li>
+            <li>Bullet & Blast Resistant Doors</li>
+            <li>Structural Steel Fabrication</li>
+          </ul>
+        </section>
       </div>
+
       <style>{`
-        details {
-          border: 1px solid rgba(236, 236, 236, 1);
-          border-radius: 20px;
-          margin-bottom: 1rem;
-          padding: 20px;
-          background-color: white;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        h2 {
+          color: #007bff;
         }
-        details[open] {
-          background-color: rgb(136, 207, 247,0.5);
+        ul {
+          list-style-type: disc;
+          padding-left: ${lang === "ar" ? "0" : "20px"};
+          padding-right: ${lang === "ar" ? "20px" : "0"};
         }
-        summary {
-          cursor: pointer;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 18px;
-          font-weight: 600;
-          list-style: none;
-        }
-        summary::-webkit-details-marker {
-          display: none;
-        }
-        .faq-index {
-          width: 24px;
-          height: 24px;
-          min-width: 24px;
-          min-height: 24px;
-          border-radius: 50%;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 14px;
-          margin-right: ${lang === "ar" ? "0" : "8px"};
-          margin-left: ${lang === "ar" ? "8px" : "0"};
-          flex-shrink: 0;
-          font-weight: 700;
-        }
-        .faq-summary-content {
-          display: flex;
-          align-items: center;
-          flex-grow: 1;
-        }
-        .icon {
-          font-weight: 900;
-          font-size: 24px;
-          user-select: none;
-          margin-left: 10px;
-          flex-shrink: 0;
-        }
-        details[open] .icon.plus {
-          display: none;
-        }
-        details:not([open]) .icon.minus {
-          display: none;
-        }
-        details > p {
-          margin-top: 1rem;
-          line-height: 1.5;
-          color: #181818;
+        li {
+          margin-bottom: 8px;
         }
       `}</style>
     </>

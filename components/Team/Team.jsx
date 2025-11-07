@@ -78,30 +78,63 @@ function StarCanvas({ style }) {
 }
 
 export default function Team({ lang }) {
-  const translations = {
-    en: {
-      heading: "Empowering Businesses with Innovative Technology",
-      description:
-        "At BrandRaize, we are a dynamic team of passionate software developers, designers, and technology experts dedicated to crafting innovative digital solutions. With over a decade of experience, we've helped businesses across various industries transform their digital presence and streamline their operations.",
-      stats: [
-        { value: "40+", label: "Projects Delivered", text: "Successfully completed projects across multiple industries." },
-        { value: "15+", label: "Team Members", text: "Dedicated professionals driving innovation and results." },
-        { value: "5+", label: "Years Experience", text: "Years of combined expertise in delivering digital solutions." },
-        { value: "10+", label: "Successful Clients", text: "Clients who achieved measurable growth through our solutions." },
-      ],
-    },
-    ar: {
-      heading: "تمكين الأعمال من خلال التكنولوجيا المبتكرة",
-      description:
-        "في براند رايز، نحن فريق ديناميكي من مطوري البرمجيات والمصممين وخبراء التكنولوجيا المتحمسين المكرسين لصياغة حلول رقمية مبتكرة. مع أكثر من عقد من الخبرة، ساعدنا الشركات في مختلف الصناعات على تحويل حضورهم الرقمي وتبسيط عملياتهم.",
-      stats: [
-        { value: "40+", label: "المشاريع المنجزة", text: "مشاريع مكتملة بنجاح في صناعات متعددة." },
-        { value: "15+", label: "أعضاء الفريق", text: "مهنيون ملتزمون يقودون الابتكار والنتائج." },
-        { value: "5+", label: "سنوات الخبرة", text: "سنوات من الخبرة المجمعة في تقديم الحلول الرقمية." },
-        { value: "10+", label: "عملاء ناجحون", text: "عملاء حققوا نموًا ملموسًا من خلال حلولنا." },
-      ],
-    },
-  };
+const translations = {
+  en: {
+    heading: "Empowering Businesses with Innovative Technology",
+    description:
+      "At BrandRaize, we are a dynamic team of passionate software developers, designers, and technology experts dedicated to crafting innovative digital solutions. With over a decade of experience, we've helped businesses across various industries transform their digital presence and streamline their operations.",
+    stats: [
+      {
+        value: "40+",
+        label: "Projects Delivered",
+        text: "Successfully completed projects across multiple industries.",
+      },
+      {
+        value: "15+",
+        label: "Team Members",
+        text: "Dedicated professionals driving innovation and results.",
+      },
+      {
+        value: "5+",
+        label: "Years Experience",
+        text: "Years of combined expertise in delivering digital solutions.",
+      },
+      {
+        value: "10+",
+        label: "Successful Clients",
+        text: "Clients who achieved measurable growth through our solutions.",
+      },
+    ],
+  },
+
+  ar: {
+    heading: "تمكين الأعمال من خلال التكنولوجيا المبتكرة",
+    description:
+      "في براند رايز، نحن فريق ديناميكي من مطوري البرمجيات والمصممين وخبراء التكنولوجيا المتحمسين المكرسين لصياغة حلول رقمية مبتكرة. مع أكثر من عقد من الخبرة، ساعدنا الشركات في مختلف الصناعات على تحويل حضورهم الرقمي وتبسيط عملياتهم.",
+    stats: [
+      {
+        value: "40+",
+        label: "المشاريع المنجزة",
+        text: "مشاريع مكتملة بنجاح في صناعات متعددة.",
+      },
+      {
+        value: "15+",
+        label: "أعضاء الفريق",
+        text: "مهنيون ملتزمون يقودون الابتكار والنتائج.",
+      },
+      {
+        value: "5+",
+        label: "سنوات الخبرة",
+        text: "سنوات من الخبرة المجمعة في تقديم الحلول الرقمية.",
+      },
+      {
+        value: "10+",
+        label: "عملاء ناجحون",
+        text: "عملاء حققوا نموًا ملموسًا من خلال حلولنا.",
+      },
+    ],
+  },
+};
 
   const t = translations[lang] || translations.en;
 

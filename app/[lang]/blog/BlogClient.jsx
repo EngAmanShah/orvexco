@@ -9,19 +9,27 @@ import { IoSearch } from "react-icons/io5";
 import styles from "./blog.module.css";
 
 const translations = {
-  en: { heading: "BrandRaize Software Insights",
-     intro: "Welcome to the BrandRaize blog — your go-to hub for the latest in software development, tech trends, and innovative solutions. Dive into expert articles, coding tutorials, and product updates crafted to elevate your software projects. Stay ahead with deep dives, industry news, and actionable insights from our development team. Whether you're a software engineer, tech enthusiast, or product manager, BrandRaize has you covered.", 
-    searchPlaceholder: "Search for articles, tutorials, or news", 
-    noArticles: "No articles available", 
-    noResults: "No articles found matching your query", 
-    readMore: "Read More", },
-ar: { heading: "مقالات براندرايز للبرمجيات",
-   intro: "مرحبًا بك في مدونة براندرايز — مركزك الرئيسي لأحدث أخبار تطوير البرمجيات، واتجاهات التكنولوجيا، والحلول المبتكرة. استكشف مقالات الخبراء، ودروس البرمجة، وتحديثات المنتجات المصممة لتحسين مشاريع البرمجيات الخاصة بك. تابع أحدث الأخبار، والرؤى العملية، والمعلومات من فريق التطوير لدينا. سواء كنت مهندس برمجيات، أو مهتم بالتقنية، أو مدير منتج، فإن براندرايز تغطي كل احتياجاتك.", 
-   searchPlaceholder: "ابحث عن مقالات، دروس، أو أخبار", 
-  noArticles: "لا توجد مقالات متاحة", 
-  noResults: "لم يتم العثور على مقالات مطابقة لاستعلامك", 
-  readMore: "اقرأ المزيد", },
+  en: {
+    heading: "ORVEXCO Engineering Insights",
+    intro:
+      "Welcome to the ORVEXCO blog — your trusted source for engineering innovations, construction advancements, and industrial technologies. Explore expert articles, project highlights, and insights into modern fabrication methods. Stay informed with updates from our engineering team and discover how ORVEXCO is shaping the future of industrial development across global markets.",
+    searchPlaceholder: "Search for articles, updates, or news",
+    noArticles: "No articles available",
+    noResults: "No articles found matching your query",
+    readMore: "Read More",
+  },
+
+  ar: {
+    heading: "مدونة أورفكسو الهندسية",
+    intro:
+      "مرحبًا بك في مدونة أورفكسو — مصدرك الموثوق للابتكارات الهندسية، وتطورات البناء، والتقنيات الصناعية الحديثة. استكشف مقالات الخبراء، وأبرز المشاريع، والرؤى حول أساليب التصنيع الحديثة. تابع آخر الأخبار من فريقنا الهندسي واكتشف كيف تسهم أورفكسو في تشكيل مستقبل التطوير الصناعي في الأسواق العالمية.",
+    searchPlaceholder: "ابحث عن مقالات أو تحديثات أو أخبار",
+    noArticles: "لا توجد مقالات متاحة",
+    noResults: "لم يتم العثور على مقالات مطابقة لبحثك",
+    readMore: "اقرأ المزيد",
+  },
 };
+
 
 export default function BlogClient({ articles, lang }) {
   const t = translations[lang] || translations.en;

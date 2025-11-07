@@ -77,62 +77,64 @@ function ParticleCanvas({ style }) {
 export default function WhyChooseUs({ lang }) {
   const [hovered, setHovered] = useState(null);
 
-  const translations = {
-    en: {
-      title: "Why Choose BrandRaize?",
-      description:
-        "We provide innovative and tailored solutions across technology, marketing, and design, helping your business achieve measurable growth.",
-      features: [
-        {
-          title: "Creative & Strategic",
-          description:
-            "Our work combines design innovation with data-driven strategies to maximize impact.",
-        },
-        {
-          title: "Multi-Industry Expertise",
-          description:
-            "We have proven experience across technology, real estate, retail, healthcare, and more.",
-        },
-        {
-          title: "Bilingual & Global Reach",
-          description:
-            "We craft solutions in both English and Arabic, enabling global accessibility.",
-        },
-        {
-          title: "Results-Driven",
-          description:
-            "Every project is designed to deliver measurable growth and tangible ROI.",
-        },
-      ],
-    },
-    ar: {
-      title: "لماذا تختار براند رايز؟",
-      description:
-        "نحن نقدم حلولًا مبتكرة ومصممة خصيصًا في مجالات التكنولوجيا والتسويق والتصميم، لمساعدة عملك على تحقيق نمو قابل للقياس.",
-      features: [
-        {
-          title: "إبداعي واستراتيجي",
-          description:
-            "يعمل فريقنا على الجمع بين الابتكار في التصميم والاستراتيجيات القائمة على البيانات لتحقيق أقصى تأثير.",
-        },
-        {
-          title: "خبرة متعددة الصناعات",
-          description:
-            "لدينا خبرة مثبتة في مجالات التكنولوجيا والعقارات والتجزئة والرعاية الصحية والمزيد.",
-        },
-        {
-          title: "ثنائي اللغة والوصول العالمي",
-          description:
-            "نقوم بصياغة الحلول باللغتين الإنجليزية والعربية، مما يتيح الوصول العالمي.",
-        },
-        {
-          title: "موجه نحو النتائج",
-          description:
-            "تم تصميم كل مشروع لتحقيق نمو قابل للقياس وعائد ملموس على الاستثمار.",
-        },
-      ],
-    },
-  };
+ const translations = {
+  en: {
+    title: "Why Choose ORVEXCO?",
+    description:
+      "At ORVEXCO, we deliver engineering, construction, and digital solutions that combine innovation, quality, and reliability. Our mission is to build the future through strength, precision, and technology.",
+    features: [
+      {
+        title: "Engineering Excellence",
+        description:
+          "We bring decades of technical expertise in steel fabrication, construction, and industrial projects.",
+      },
+      {
+        title: "Innovative & Sustainable",
+        description:
+          "Our designs and systems focus on efficiency, sustainability, and long-term performance.",
+      },
+      {
+        title: "Comprehensive Services",
+        description:
+          "From industrial engineering to IT and digital transformation, we provide end-to-end project solutions.",
+      },
+      {
+        title: "Trusted Across Regions",
+        description:
+          "With operations in the USA, Kuwait, and Saudi Arabia, ORVEXCO has earned the trust of global partners.",
+      },
+    ],
+  },
+
+  ar: {
+    title: "لماذا تختار أورفكسو؟",
+    description:
+      "في أورفكسو، نقدم حلولًا هندسية وإنشائية ورقمية تجمع بين الابتكار والجودة والموثوقية. مهمتنا هي بناء المستقبل من خلال القوة والدقة والتكنولوجيا.",
+    features: [
+      {
+        title: "التميز الهندسي",
+        description:
+          "نمتلك خبرة هندسية تمتد لعقود في مجال تصنيع الفولاذ والبناء والمشاريع الصناعية.",
+      },
+      {
+        title: "ابتكار واستدامة",
+        description:
+          "تركز تصاميمنا وأنظمتنا على الكفاءة والاستدامة والأداء طويل الأمد.",
+      },
+      {
+        title: "خدمات شاملة",
+        description:
+          "من الهندسة الصناعية إلى تقنية المعلومات والتحول الرقمي، نقدم حلول مشاريع متكاملة من البداية إلى النهاية.",
+      },
+      {
+        title: "موثوقون عبر المناطق",
+        description:
+          "بوجودنا في الولايات المتحدة والكويت والمملكة العربية السعودية، اكتسبت أورفكسو ثقة الشركاء العالميين.",
+      },
+    ],
+  },
+};
+
 
   const t = translations[lang] || translations.en;
 

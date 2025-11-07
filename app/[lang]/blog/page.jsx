@@ -4,20 +4,21 @@ import BlogClient from "./BlogClient";
 
 const metas = {
   en: {
-    title: "BrandRaize | Digital Marketing & Brand Growth Experts",
+    title: "ORVEXCO | Engineering, Construction & Industrial Solutions",
     description:
-      "Boost your business with BrandRaize — experts in digital marketing, social media growth, paid ads, Amazon brand expansion, and global brand visibility. Let's raise your brand together.",
+      "ORVEXCO is a global engineering company specializing in construction, fabrication, and architectural solutions. From fire-rated doors to structural steel fabrication, we deliver innovative, safe, and reliable industrial solutions across Saudi Arabia, Kuwait, and the USA.",
     keywords:
-      "digital marketing, brand growth, social media management, paid ads, Amazon marketing, online branding, business growth, BrandRaize",
+      "ORVEXCO, engineering company, construction, industrial solutions, structural steel fabrication, fire rated doors, steel doors, aluminum fabrication, industrial projects, Saudi Arabia engineering, Kuwait construction, USA engineering",
   },
   ar: {
-    title: "براندرايز | خبراء التسويق الرقمي ونمو العلامات التجارية",
+    title: "أورفكسو | حلول هندسية وإنشائية وصناعية",
     description:
-      "ارتقِ بعملك مع براندرايز — خبراء في التسويق الرقمي، إدارة وسائل التواصل الاجتماعي، الحملات الإعلانية، توسع العلامة التجارية على أمازون، وزيادة الظهور العالمي. دعنا نرفع علامتك التجارية معًا.",
+      "أورفكسو شركة هندسية عالمية متخصصة في مجالات البناء والتصنيع والعمارة. من الأبواب المقاومة للحريق إلى تصنيع الهياكل الفولاذية، نقدم حلولًا صناعية مبتكرة وآمنة وموثوقة في المملكة العربية السعودية والكويت والولايات المتحدة الأمريكية.",
     keywords:
-      "التسويق الرقمي، نمو العلامة التجارية، إدارة وسائل التواصل، الحملات الإعلانية، التسويق عبر أمازون، التسويق عبر الإنترنت، توسيع الأعمال، براندرايز",
+      "أورفكسو، شركة هندسية، البناء، الحلول الصناعية، تصنيع الهياكل الفولاذية، أبواب مقاومة للحريق، أبواب فولاذية، تصنيع الألمنيوم، مشاريع صناعية، الهندسة في السعودية، البناء في الكويت، الهندسة في أمريكا",
   },
 };
+
 
 
 export async function generateMetadata({ params }) {

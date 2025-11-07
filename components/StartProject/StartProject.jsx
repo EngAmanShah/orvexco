@@ -80,14 +80,14 @@ export default function StartProject({ lang }) {
   return (
     <section
       className="position-relative py-5 text-center text-white"
-      style={{ minHeight: "70vh",backgroundColor: "#001233"  }}
+      style={{ minHeight: "70vh", backgroundColor: "#001233" }}
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       {/* Gradient Background */}
       <div
         className="position-absolute top-0 start-0 w-100 h-100"
         style={{
-          backgroundColor:"#001233",
+          backgroundColor: "#001233",
           zIndex: 0,
         }}
       ></div>
