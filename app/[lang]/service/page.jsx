@@ -6,18 +6,18 @@ export async function generateMetadata({ params }) {
 
   const translations = {
     en: {
-      title: "Our Services | BrandRaize",
+      title: "Our Services | ORVEXCO",
       description:
-        "Explore BrandRaize services: Web Development, Mobile App Development, IT Solutions, Digital Marketing, Graphic Design, and more — tailored to help your business thrive.",
+        "Explore ORVEXCO services: Fire Rated Doors, High-Speed Fabric Doors, Garage Doors, Rolling Shutters, Bullet & Blast Resistant Doors, Structural Steel Fabrication — engineered for safety, precision, and industrial excellence.",
       keywords:
-        "BrandRaize services, web development, mobile app development, IT solutions, digital marketing, SEO, graphic design, business solutions, technology services",
+        "ORVEXCO services, fire rated doors, high-speed fabric doors, garage doors, rolling shutters, bullet resistant doors, blast resistant doors, structural steel fabrication, industrial solutions, engineering services",
     },
     ar: {
-      title: "خدماتنا | براند رايز",
+      title: "خدماتنا | أورفكسو",
       description:
-        "استكشف خدمات براند رايز: تطوير المواقع، تطوير تطبيقات الجوال، حلول تكنولوجيا المعلومات، التسويق الرقمي، التصميم الجرافيكي والمزيد — لدعم نجاح عملك.",
+        "استكشف خدمات أورفكسو: الأبواب المقاومة للحريق، أبواب قماشية عالية السرعة، أبواب الجراج، أبواب الدحرجة، الأبواب المقاومة للرصاص والانفجارات، تصنيع الهياكل الفولاذية — مصممة لتحقيق الأمان والدقة والتميز الصناعي.",
       keywords:
-        "خدمات براند رايز, تطوير المواقع, تطوير تطبيقات الجوال, حلول تكنولوجيا المعلومات, التسويق الرقمي, تحسين محركات البحث, التصميم الجرافيكي, حلول الأعمال, خدمات تقنية",
+        "خدمات أورفكسو, أبواب مقاومة للحريق, أبواب قماشية عالية السرعة, أبواب الجراج, أبواب الدحرجة, أبواب مقاومة للرصاص, أبواب مقاومة للانفجارات, تصنيع الهياكل الفولاذية, حلول صناعية, خدمات هندسية",
     },
   };
 

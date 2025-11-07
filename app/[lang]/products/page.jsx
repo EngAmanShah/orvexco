@@ -8,18 +8,19 @@ export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const { lang } = resolvedParams;
 
-  const metas = {
-    en: {
-      title: "Our Services - Brandraize",
-      description:
-        "Discover Brandraize's full range of creative and digital services! From digital marketing to application development, we deliver innovative solutions that elevate your brand and drive measurable results.",
-    },
-    ar: {
-      title: "خدماتنا - براندرايز",
-      description:
-        "استعرض مجموعة براندرايز الكاملة من الخدمات الرقمية والإبداعية! من التسويق الرقمي إلى تطوير التطبيقات، نقدم حلولًا مبتكرة ترتقي بعلامتك التجارية وتحقق نتائج ملموسة.",
-    },
-  };
+const metas = {
+  en: {
+    title: "Our Services - ORVEXCO",
+    description:
+      "Discover ORVEXCO's full range of industrial and construction services! From fire-rated doors to structural steel fabrication, we deliver innovative, safe, and high-quality engineering solutions.",
+  },
+  ar: {
+    title: "خدماتنا - أورفكسو",
+    description:
+      "استعرض مجموعة أورفكسو الكاملة من الخدمات الصناعية والإنشائية! من الأبواب المقاومة للحريق إلى تصنيع الهياكل الفولاذية، نقدم حلولًا هندسية مبتكرة وآمنة وعالية الجودة.",
+  },
+};
+
 
   const meta = metas[lang] || metas.en;
 

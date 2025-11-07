@@ -89,8 +89,8 @@ Reach out today and start building something extraordinary with us!`,
       {
         icon: <FaPhoneAlt size={28} />,
         label: "Phone",
-        value: "+966559931444",
-        link: "tel:+966559931444",
+        value: "+966557828312",
+        link: "tel:+966557828312",
       },
       {
         icon: <FaEnvelope size={28} />,
@@ -120,8 +120,8 @@ Reach out today and start building something extraordinary with us!`,
       {
         icon: <FaPhoneAlt size={28} />,
         label: "الهاتف",
-        value: "966559931444",
-        link: "tel:+966559931444",
+        value: "966557828312",
+        link: "tel:+966557828312",
       },
       {
         icon: <FaEnvelope size={28} />,

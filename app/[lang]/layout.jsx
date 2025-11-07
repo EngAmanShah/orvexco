@@ -28,18 +28,17 @@ export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const { lang } = resolvedParams;
 
-  const metas = {
-    en: {
-      title: "Brandraize",
-      description:
-        "Brandraize is a creative digital agency led by Engr. Aman Shah. We design, build, and market digital experiences that drive growth, credibility, and innovation. From web and mobile app development to digital marketing, graphic design, and IT solutions — we empower brands to stand out and succeed.",
-    },
-    ar: {
-      title: "براندرايزء",
-      description:
-        "براندرايز هي وكالة إبداعية يقودها المهندس أمان شاه. نصمم ونبني ونُسوّق تجارب رقمية مبتكرة تعزز النمو والمصداقية والابتكار. من تطوير المواقع والتطبيقات إلى التسويق الرقمي والتصميم الجرافيكي وحلول تكنولوجيا المعلومات — نساعد العلامات التجارية على التميز والنجاح.",
-    },
-  };
+const metas = {
+  en: {
+    title: "ORVEXCO",
+    description: "Team Orvexco established in the USA in 2009 as CIL, expanded to Kuwait in 2010 (officially registered in 2024), and further strengthened its presence in Saudi Arabia in 2025. We deliver innovative and reliable engineering solutions across the construction and architectural sectors, combining experience with modern technology, quality workmanship, and customer-focused excellence.",
+  },
+  ar: {
+    title: "أورفكسو",
+    description: "تأسست شركة أورفكسو في الولايات المتحدة عام 2009 باسم CIL، وتوسعت إلى الكويت في عام 2010، وتم تسجيلها رسميًا في عام 2024، وعززت حضورها في المملكة العربية السعودية في عام 2025. نقدم حلولًا هندسية مبتكرة وموثوقة في مجالات البناء والعمارة، مع الجمع بين الخبرة والتقنيات الحديثة والجودة العالية وتركيز على رضا العملاء.",
+  },
+};
+
 
   //  const image = "https://happy-face.co/og.jpg";
   const baseUrl = "https://happy-face.co";

@@ -11,69 +11,50 @@ export default function Testimonials({ lang = "en" }) {
 const testimonialsContent = {
   en: [
     {
-      name: "Sophia Turner",
+      name: "Mr. Abdul Aziz Al Mhan",
       quote:
-        "Brandraize transformed our online presence! Within just three months, our social media engagement tripled, and we started receiving inquiries from international clients.",
+        "ORVEXCO consistently delivers high-quality industrial projects. Their commitment to precision, safety, and efficiency is unmatched in the industry.",
     },
     {
-      name: "Emily Carter",
+      name: "Eng. Chakola",
       quote:
-        "The BrandRaize team built a complete marketing strategy that took our brand visibility to the next level. Their ad campaigns are creative, targeted, and deliver real results.",
+        "Working with ORVEXCO has been a pleasure. Their team combines decades of experience with innovative solutions that meet our project requirements perfectly.",
     },
     {
-      name: "Olivia Bennett",
+      name: "Jubail Industrial City Client",
       quote:
-        "Thanks to BrandRaize, our e-commerce sales have grown consistently. Their expertise in paid advertising and content marketing has been a game changer for our business.",
+        "ORVEXCO’s fire-rated doors and structural steel solutions exceeded our expectations. Their attention to detail and timely delivery are truly commendable.",
     },
     {
-      name: "Ava Martinez",
+      name: "Kuwait Construction Partner",
       quote:
-        "Working with BrandRaize has been one of the best decisions for our company. They truly understand brand storytelling and helped us build a strong digital identity.",
-    },
-    {
-      name: "Mia Robinson",
-      quote:
-        "From social media management to SEO, BrandRaize handles everything professionally. Our website traffic has doubled, and our followers are now highly engaged.",
-    },
-    {
-      name: "Isabella Harris",
-      quote:
-        "The BrandRaize team is highly skilled and results-driven. They helped us launch targeted campaigns that significantly increased our conversions and brand awareness.",
+        "We have collaborated with ORVEXCO on multiple projects. Their expertise in industrial fabrication and construction has made every project successful.",
     },
   ],
   ar: [
     {
-      name: "صوفيا تورنر",
+      name: "عبدالعزيز علي المهّان",
       quote:
-        "براندرايز غيّر وجودنا الرقمي تمامًا! خلال ثلاثة أشهر فقط، تضاعف تفاعلنا على وسائل التواصل الاجتماعي ثلاث مرات، وبدأنا في تلقي استفسارات من عملاء دوليين.",
+        "تقدم أورفكسو مشاريع صناعية عالية الجودة باستمرار. التزامهم بالدقة والأمان والكفاءة لا مثيل له في الصناعة.",
     },
     {
-      name: "إميلي كارتر",
+      name: "المهندس تشاكولا",
       quote:
-        "فريق براندرايز وضع لنا استراتيجية تسويق متكاملة رفعت مستوى ظهور علامتنا التجارية بشكل مذهل. حملاتهم الإعلانية مبتكرة ومستهدفة وتحقق نتائج حقيقية.",
+        "كان العمل مع أورفكسو ممتعًا. يجمع فريقهم بين عقود من الخبرة وحلول مبتكرة تلبي متطلبات مشاريعنا بدقة.",
     },
     {
-      name: "أوليفيا بينيت",
+      name: "عميل مدينة الجبيل الصناعية",
       quote:
-        "بفضل براندرايز، زادت مبيعات متجرنا الإلكتروني بشكل مستمر. خبرتهم في الإعلانات المدفوعة وتسويق المحتوى كانت نقطة تحول لأعمالنا.",
+        "تجاوزت أبواب أورفكسو المقاومة للحريق وحلول الهياكل الفولاذية توقعاتنا. اهتمامهم بالتفاصيل وتسليمهم في الوقت المحدد يستحق الثناء.",
     },
     {
-      name: "آفا مارتينيز",
+      name: "شريك بناء الكويت",
       quote:
-        "العمل مع براندرايز كان من أفضل القرارات لشركتنا. إنهم يفهمون حقًا فن بناء العلامة التجارية وساعدونا في إنشاء هوية رقمية قوية.",
-    },
-    {
-      name: "ميا روبنسون",
-      quote:
-        "من إدارة وسائل التواصل الاجتماعي إلى تحسين محركات البحث، يتعامل براندرايز مع كل شيء باحترافية. تضاعف عدد زوار موقعنا، وأصبح متابعونا أكثر تفاعلًا.",
-    },
-    {
-      name: "إيزابيلا هاريس",
-      quote:
-        "فريق براندرايز يتمتع بمهارات عالية ويركز على النتائج. ساعدونا في إطلاق حملات مستهدفة زادت من التحويلات والوعي بعلامتنا التجارية بشكل كبير.",
+        "تعاونّا مع أورفكسو في عدة مشاريع. خبرتهم في التصنيع الصناعي والبناء جعلت كل مشروع ناجحًا.",
     },
   ],
 };
+
 
 
   const testimonials = testimonialsContent[lang] || testimonialsContent.en;
