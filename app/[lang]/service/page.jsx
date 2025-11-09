@@ -30,11 +30,11 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: t.title,
       description: t.description,
-      url: `https://brandraize.com/services/${lang}`,
-      siteName: "BrandRaize",
+      url: `www.orvexco.com/services/${lang}`,
+      siteName: "Orvexco",
       images: [
         {
-          url: "https://brandraize.com/images/services-banner.jpg",
+          url: "www.orvexco.com/images/services-banner.jpg",
           width: 1200,
           height: 630,
           alt: t.title,

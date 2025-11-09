@@ -11,6 +11,7 @@ import {
   FaSnapchatGhost,
 } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
+import Services from "./Services";
 
 export default function Footer({ lang }) {
   const pathname = usePathname();
@@ -54,7 +55,7 @@ export default function Footer({ lang }) {
       home: "Home",
       about: "About Us",
       contact: "Contact Us",
-      blog: "Blog",
+      Services: "Services",
       faq: "FAQ",
     },
     rightsReserved: "All Rights Reserved.",

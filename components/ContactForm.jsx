@@ -5,12 +5,12 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
-export default function ContactForm({ lang }) {
+export default function ContactForm({ lang}) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    subject: "", 
     message: "",
   });
 

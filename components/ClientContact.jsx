@@ -83,7 +83,7 @@ Reach out today and start building something extraordinary with us!`,
       {
         icon: <FaMapMarkerAlt size={28} />,
         label: "Address",
-        value: "Al Sawadi, Riyadh, Saudi Arabia",
+        value: "Jubail Industrial City, King Faisal Bin Abdulaziz Street, Saudi Arabia",
         link: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3554.474482733462!2d49.65254067544304!3d27.01516887658635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzU0LjYiTiA0OcKwMzknMTguNCJF!5e0!3m2!1sen!2ssa!4v1762516140061!5m2!1sen!2ssa",
       },
       {
@@ -114,8 +114,8 @@ Reach out today and start building something extraordinary with us!`,
       {
         icon: <FaMapMarkerAlt size={28} />,
         label: "العنوان",
-        value: "السودي، الرياض، المملكة العربية السعودية",
-        link: "https://www.google.com/maps/place/24%C2%B035'51.9%22N+46%C2%B041'16.9%22E/@24.5977394,46.6854418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.5977394!4d46.6880167!5m1!1e1?hl=en&entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D",
+        value: "الجبيل الصناعية، شارع الملك فيصل بن عبدالعزيز، المملكة العربية السعودية",
+        link: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3554.474482733462!2d49.65254067544304!3d27.01516887658635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzU0LjYiTiA0OcKwMzknMTguNCJF!5e0!3m2!1sen!2ssa!4v1762516140061!5m2!1sen!2ssa",
       },
       {
         icon: <FaPhoneAlt size={28} />,
