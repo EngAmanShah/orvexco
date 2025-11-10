@@ -7,206 +7,92 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
-export default function ValueSlider({ lang = 'en' }) {
-  const isRTL = lang === 'ar';
-  
+export default function ValueSlider({ lang }) {
   const slides = [
     {
-      title: {
-        en: "Fire Rated Doors",
-        ar: "أبواب مقاومة للحريق"
-      },
-      subtitle: {
-        en: "Steel/Wood/Glass Fire Protection Solutions",
-        ar: "حلول الحماية من الحرائق من الفولاذ/الخشب/الزجاج"
-      },
-      description: {
-        en: "Specifications typically include details on the door leaf and frame materials, fire resistance rating, hardware, seals, and finish. Common specifications involve using galvanized steel for the door and frame, a core material like honeycomb or a mineral core, and a powder-coated or fire-retardant paint finish.",
-        ar: "تشمل المواصفات عادةً تفاصيل عن مواد لوح الباب والإطار، وتصنيف مقاومة الحريق، والأجهزة، والأختام، والطلاء. تشمل المواصفات الشائعة استخدام الفولاذ المجلفن للباب والإطار، ومادة أساسية مثل العسل أو اللب المعدني، وطلاء مطلي بالمسحوق أو مقاوم للحريق."
-      },
-      features: {
-        en: [
-          "Galvanized steel door & frame",
-          "Honeycomb or mineral core",
-          "Fire-resistant hardware & seals",
-          "Powder-coated finish"
-        ],
-        ar: [
-          "باب وإطار من الفولاذ المجلفن",
-          "لب من العسل أو المعدن",
-          "أجهزة وأختام مقاومة للحريق",
-          "تشطيب مطلي بالمسحوق"
-        ]
-      },
+      title: "Fire Rated Doors",
+      subtitle: "Steel/Wood/Glass Fire Protection Solutions",
+      description: "Specifications typically include details on the door leaf and frame materials, fire resistance rating, hardware, seals, and finish. Common specifications involve using galvanized steel for the door and frame, a core material like honeycomb or a mineral core, and a powder-coated or fire-retardant paint finish.",
+      features: [
+        "Galvanized steel door & frame",
+        "Honeycomb or mineral core",
+        "Fire-resistant hardware & seals",
+        "Powder-coated finish"
+      ],
       image: "/Fire4.jpg",
     },
     {
-      title: {
-        en: "High Speed Fabric Doors",
-        ar: "أبواب القماش عالية السرعة"
-      },
-      subtitle: {
-        en: "Rapid Operation for High-Traffic Areas",
-        ar: "تشغيل سريع للمناطق عالية الازدحام"
-      },
-      description: {
-        en: "Curtain material (like PVC-coated polyester), operational speed (often 50-70 inches per second), wind resistance (up to 22 psf for heavy-duty models), and safety features (such as infrared sensors, reversing edges, and breakaway bottom bars).",
-        ar: "مادة الستارة (مثل البوليستر المطلي بـ PVC)، وسرعة التشغيل (غالبًا 50-70 بوصة في الثانية)، ومقاومة الرياح (حتى 22 psf للموديلات الثقيلة)، وميزات الأمان (مثل أجهزة استشعار الأشعة تحت الحمراء، والحواف العكسية، والقضبان السفلية القابلة للكسر)."
-      },
-      features: {
-        en: [
-          "50-70 inches per second speed",
-          "Up to 22 psf wind resistance",
-          "Infrared safety sensors",
-          "PVC-coated polyester curtain"
-        ],
-        ar: [
-          "سرعة 50-70 بوصة في الثانية",
-          "مقاومة الرياح حتى 22 psf",
-          "أجهزة استشعار أمان بالأشعة تحت الحمراء",
-          "ستارة من البوليستر المطلي بـ PVC"
-        ]
-      },
+      title: "High Speed Fabric Doors",
+      subtitle: "Rapid Operation for High-Traffic Areas",
+      description: "Curtain material (like PVC-coated polyester), operational speed (often 50-70 inches per second), wind resistance (up to 22 psf for heavy-duty models), and safety features (such as infrared sensors, reversing edges, and breakaway bottom bars).",
+      features: [
+        "50-70 inches per second speed",
+        "Up to 22 psf wind resistance",
+        "Infrared safety sensors",
+        "PVC-coated polyester curtain"
+      ],
       image: "/High2.jpg",
     },
     {
-      title: {
-        en: "Garage Doors",
-        ar: "أبواب المرآب"
-      },
-      subtitle: {
-        en: "Commercial, Industrial & Residential Solutions",
-        ar: "حلول تجارية وصناعية وسكنية"
-      },
-      description: {
-        en: "Suitable for commercial, industrial, or residential use. You can adjust details depending on the type (manual, automatic, sectional, or roller shutter). Constructed from galvanized steel or aluminum sheets with polyurethane foam insulation.",
-        ar: "مناسبة للاستخدام التجاري أو الصناعي أو السكني. يمكنك تعديل التفاصيل حسب النوع (يدوي، أوتوماتيكي، قطاعي، أو مصراع دوار). مصنوعة من صفائح الفولاذ المجلفن أو الألومنيوم مع عزل رغوة البولي يوريثان."
-      },
-      features: {
-        en: [
-          "Galvanized steel/aluminum construction",
-          "40-50mm insulation thickness",
-          "Sectional/Roller/Overhead types",
-          "Stainless steel vision panels"
-        ],
-        ar: [
-          "بناء من الفولاذ المجلفن/الألومنيوم",
-          "سمك العزل 40-50 ملم",
-          "أنواع قطاعية/دوارة/علوية",
-          "لوحات رؤية من الفولاذ المقاوم للصدأ"
-        ]
-      },
+      title: "Garage Doors",
+      subtitle: "Commercial, Industrial & Residential Solutions",
+      description: "Suitable for commercial, industrial, or residential use. You can adjust details depending on the type (manual, automatic, sectional, or roller shutter). Constructed from galvanized steel or aluminum sheets with polyurethane foam insulation.",
+      features: [
+        "Galvanized steel/aluminum construction",
+        "40-50mm insulation thickness",
+        "Sectional/Roller/Overhead types",
+        "Stainless steel vision panels"
+      ],
       image: "/Gar2.jpg",
     },
     {
-      title: {
-        en: "Rolling Shutter Doors",
-        ar: "أبواب اللفافات"
-      },
-      subtitle: {
-        en: "Secure & Durable Industrial Solutions",
-        ar: "حلول صناعية آمنة ومتينة"
-      },
-      description: {
-        en: "Manually or Motor Operated Rolling Shutter Door, Vertical rolling type, guided within steel side channels. Suitable for industrial, commercial, warehouse, and parking areas with inside or outside wall face installation.",
-        ar: "باب مصراع دوار يدوي أو يعمل بالمحرك، نوع التدحرج العمودي، موجه داخل قنوات جانبية فولاذية. مناسب للمناطق الصناعية والتجارية والمستودعات ومواقف السيارات مع تركيب واجهة الجدار الداخلية أو الخارجية."
-      },
-      features: {
-        en: [
-          "Manual or motor operated",
-          "Vertical rolling design",
-          "Steel side channels",
-          "Industrial & commercial use"
-        ],
-        ar: [
-          "تشغيل يدوي أو بالمحرك",
-          "تصميم تدحرج عمودي",
-          "قنوات جانبية فولاذية",
-          "استخدام صناعي وتجاري"
-        ]
-      },
+      title: "Rolling Shutter Doors",
+      subtitle: "Secure & Durable Industrial Solutions",
+      description: "Manually or Motor Operated Rolling Shutter Door, Vertical rolling type, guided within steel side channels. Suitable for industrial, commercial, warehouse, and parking areas with inside or outside wall face installation.",
+      features: [
+        "Manual or motor operated",
+        "Vertical rolling design",
+        "Steel side channels",
+        "Industrial & commercial use"
+      ],
       image: "/rol2.jpg",
     },
     {
-      title: {
-        en: "Bullet & Blast Resistant Doors",
-        ar: "أبواب مقاومة للرصاص والانفجارات"
-      },
-      subtitle: {
-        en: "Maximum Security Protection",
-        ar: "حماية أمنية قصوى"
-      },
-      description: {
-        en: "Hinged single or double leaf doors designed to resist ballistic penetration and overpressure blast loads. Tested and certified to UL 752 Levels 1–10 or EN 1522/1523 for security control rooms, data centers, embassies, and high-risk areas.",
-        ar: "أبواب مفصلية مفردة أو مزدوجة مصممة لمقاومة الاختراق الباليستي وأحمال انفجار الضغط الزائد. مختبرة ومعتمدة وفق UL 752 المستويات 1-10 أو EN 1522/1523 لغرف التحكم الأمنية ومراكز البيانات والسفارات والمناطق عالية الخطورة."
-      },
-      features: {
-        en: [
-          "UL 752 & EN 1522/1523 certified",
-          "Ballistic penetration resistance",
-          "Blast load protection",
-          "High-security facilities"
-        ],
-        ar: [
-          "معتمدة UL 752 و EN 1522/1523",
-          "مقاومة الاختراق الباليستي",
-          "حماية من أحمال الانفجار",
-          "مرافق عالية الأمان"
-        ]
-      },
+      title: "Bullet & Blast Resistant Doors",
+      subtitle: "Maximum Security Protection",
+      description: "Hinged single or double leaf doors designed to resist ballistic penetration and overpressure blast loads. Tested and certified to UL 752 Levels 1–10 or EN 1522/1523 for security control rooms, data centers, embassies, and high-risk areas.",
+      features: [
+        "UL 752 & EN 1522/1523 certified",
+        "Ballistic penetration resistance",
+        "Blast load protection",
+        "High-security facilities"
+      ],
       image: "/Bul4.jpg",
     },
     {
-      title: {
-        en: "Structural Steel Fabrication",
-        ar: "تصنيع الفولاذ الإنشائي"
-      },
-      subtitle: {
-        en: "Precision Engineering & Construction",
-        ar: "هندسة وإنشاءات دقيقة"
-      },
-      description: {
-        en: "The work includes the supply, fabrication, welding, surface preparation, painting, delivery, and erection of all structural steel components as per approved drawings and standards for industrial buildings, warehouses, platforms, and structural elements.",
-        ar: "يشمل العمل توريد وتصنيع ولحام وتحضير السطح وطلاء وتسليم وتركيب جميع مكونات الفولاذ الإنشائي وفقًا للرسومات والمعايير المعتمدة للمباني الصناعية والمستودعات والمنصات والعناصر الإنشائية."
-      },
-      features: {
-        en: [
-          "Complete fabrication services",
-          "Welding & surface preparation",
-          "Industrial building structures",
-          "Quality standards compliance"
-        ],
-        ar: [
-          "خدمات تصنيع كاملة",
-          "اللحام وتحضير السطح",
-          "هياكل المباني الصناعية",
-          "الامتثال لمعايير الجودة"
-        ]
-      },
+      title: "Structural Steel Fabrication",
+      subtitle: "Precision Engineering & Construction",
+      description: "The work includes the supply, fabrication, welding, surface preparation, painting, delivery, and erection of all structural steel components as per approved drawings and standards for industrial buildings, warehouses, platforms, and structural elements.",
+      features: [
+        "Complete fabrication services",
+        "Welding & surface preparation",
+        "Industrial building structures",
+        "Quality standards compliance"
+      ],
       image: "/Str.jpg",
     }
   ];
 
-  const heading = {
-    en: "We Provide These Services",
-    ar: "نحن نقدم هذه الخدمات"
-  };
-
-  const subheading = {
-    en: "Comprehensive door solutions and structural steel fabrication services for commercial, industrial, and residential applications",
-    ar: "حلول أبواب شاملة وخدمات تصنيع الفولاذ الإنشائي للتطبيقات التجارية والصناعية والسكنية"
-  };
-
   return (
-    <section className="py-16 bg-white" dir={isRTL ? 'rtl' : 'ltr'}>
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Main Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {heading[lang]}
+            We Provide These Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {subheading[lang]}
+            Comprehensive door solutions and structural steel fabrication services for commercial, industrial, and residential applications
           </p>
         </div>
 
@@ -214,8 +100,8 @@ export default function ValueSlider({ lang = 'en' }) {
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             navigation={{
-              nextEl: isRTL ? '.swiper-button-prev' : '.swiper-button-next',
-              prevEl: isRTL ? '.swiper-button-next' : '.swiper-button-prev',
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
             }}
             pagination={{
               clickable: true,
@@ -231,16 +117,16 @@ export default function ValueSlider({ lang = 'en' }) {
                   {/* Left Content */}
                   <div className="ValueProposition_left">
                     <div className="ValueProposition_badge">
-                      {slide.title[lang]}
+                      {slide.title}
                     </div>
                     <h2 className="sectionTitle">
-                      {slide.subtitle[lang]}
+                      {slide.subtitle}
                     </h2>
                     <p className="sectionDescription">
-                      {slide.description[lang]}
+                      {slide.description}
                     </p>
                     <div className="ValueProposition_featuresRow">
-                      {slide.features[lang].map((feature, i) => (
+                      {slide.features.map((feature, i) => (
                         <div key={i} className="ValueProposition_featureItem">
                           <div className="featureIcon">✓</div>
                           <div className="ValueProposition_featureSubtitle">
@@ -255,7 +141,7 @@ export default function ValueSlider({ lang = 'en' }) {
                   <div className="ValueProposition_right">
                     <Image
                       src={slide.image}
-                      alt={slide.title[lang]}
+                      alt={slide.title}
                       fill
                       className="ValueProposition_image"
                       priority={index === 0}
@@ -268,7 +154,7 @@ export default function ValueSlider({ lang = 'en' }) {
             {/* Navigation Arrows - Positioned on sides */}
             <div className="StackedSlider_arrows">
               <button 
-                className={`swiper-button-prev StackedSlider_arrowButton ${isRTL ? 'StackedSlider_arrowRight' : 'StackedSlider_arrowLeft'}`} 
+                className="swiper-button-prev StackedSlider_arrowButton StackedSlider_arrowLeft" 
                 type="button"
               >
                 <svg fill="none" height="28" viewBox="0 0 42 42" width="28" xmlns="http://www.w3.org/2000/svg">
@@ -276,7 +162,7 @@ export default function ValueSlider({ lang = 'en' }) {
                 </svg>
               </button>
               <button 
-                className={`swiper-button-next StackedSlider_arrowButton ${isRTL ? 'StackedSlider_arrowLeft' : 'StackedSlider_arrowRight'}`} 
+                className="swiper-button-next StackedSlider_arrowButton StackedSlider_arrowRight" 
                 type="button"
               >
                 <svg fill="none" height="28" viewBox="0 0 42 42" width="28" xmlns="http://www.w3.org/2000/svg">
