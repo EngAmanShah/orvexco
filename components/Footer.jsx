@@ -93,7 +93,7 @@ export default function Footer({ lang }) {
             {/* Social Media */}
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-3 flex-wrap">
               <a
-                href="https://facebook.com/orvexco"
+                href="https://www.facebook.com/share/19unEvNZDK/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black"
@@ -102,18 +102,9 @@ export default function Footer({ lang }) {
                 <FaFacebookF size={20} />
               </a>
 
-              <a
-                href="https://x.com/orvexco"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black"
-                aria-label="Twitter"
-              >
-                <FaTwitter size={20} />
-              </a>
 
               <a
-                href="https://instagram.com/orvexco"
+                href="https://www.instagram.com/orvexcoest.co?utm_source=qr&igsh=MWNqbzloamY3aHljbg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black"
@@ -123,7 +114,7 @@ export default function Footer({ lang }) {
               </a>
 
               <a
-                href="https://www.linkedin.com/company/orvexco/"
+                href="http://www.linkedin.com/in/ovrvexco-est-co-1aa50b391"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black"
@@ -132,25 +123,7 @@ export default function Footer({ lang }) {
                 <FaLinkedinIn size={20} />
               </a>
 
-              <a
-                href="https://github.com/orvexco"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black"
-                aria-label="GitHub"
-              >
-                <FaGithub size={20} />
-              </a>
-
-              <a
-                href="https://www.fiverr.com/orvexco"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black"
-                aria-label="Fiverr"
-              >
-                <SiFiverr size={28} />
-              </a>
+          
 
               <a
                 href="https://www.snapchat.com/add/orvexco"

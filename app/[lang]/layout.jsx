@@ -40,8 +40,7 @@ const metas = {
 };
 
 
-  //  const image = "https://happy-face.co/og.jpg";
-  const baseUrl = "https://happy-face.co";
+  const baseUrl = "";
   const canonicalUrl = `${baseUrl}/${lang}`;
 
   const meta = metas[lang] || metas.en;

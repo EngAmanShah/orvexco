@@ -213,6 +213,7 @@ const content = {
         features={features}
           lang={lang}
       />
+      
       {/* Services */}
       <Services
         lang={lang}
