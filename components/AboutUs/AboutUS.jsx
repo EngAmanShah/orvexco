@@ -122,7 +122,7 @@ import {
 
  const services = [
   {
-    image: "/services/fire-door.gif",
+    image: "/fire-door.gif",
     title: { en: "Fire Rated Doors (Steel/Wood/Glass)", ar: "أبواب مقاومة للحريق (فولاذ / خشب / زجاج)" },
     text: {
       en: "Certified fire-rated doors designed for safety and durability in commercial and industrial applications.",
