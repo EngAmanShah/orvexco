@@ -45,7 +45,7 @@ const translations = {
         "Thermal Efficiency: High insulation properties for energy savings",
         "Acoustic Performance: Superior sound reduction capabilities",
         "Durability: Corrosion-resistant materials for long lifespan",
-        "Materials: High-grade aluminum and Fiberglass Reinforced Plastic (FRP)",
+        "Materials: High-grade Aluminum and Fiberglass Reinforced Plastic (FRP)",
         "Customization: Available in various colors, finishes, and sizes"
       ]
     },
@@ -172,7 +172,7 @@ export default function AluminumWindowsPage({ params }) {
             <div className="col-md-6 col-lg-3">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/alum1.jpg"
+                  src="/services/Alum1.jpg"
                   alt={t.types.fixed.title}
                   width={400}
                   height={250}
@@ -187,7 +187,7 @@ export default function AluminumWindowsPage({ params }) {
             <div className="col-md-6 col-lg-3">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/alum2.jpg"
+                  src="/services/Alum2.jpg"
                   alt={t.types.sliding.title}
                   width={400}
                   height={250}
@@ -202,7 +202,7 @@ export default function AluminumWindowsPage({ params }) {
             <div className="col-md-6 col-lg-3">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/alum3.jpg"
+                  src="/services/Alum3.jpg"
                   alt={t.types.projected.title}
                   width={400}
                   height={250}
@@ -217,7 +217,7 @@ export default function AluminumWindowsPage({ params }) {
             <div className="col-md-6 col-lg-3">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/alum4.jpg"
+                  src="/services/Alum4.jpg"
                   alt={t.types.casement.title}
                   width={400}
                   height={250}
@@ -263,12 +263,12 @@ export default function AluminumWindowsPage({ params }) {
 
           <div className="row g-4 justify-content-center">
             {[
-              "/services/alum1.jpg",
-              "/services/alum2.jpg",
-              "/services/alum3.jpg",
-              "/services/alum4.jpg",
-              "/services/alum5.jpg",
-              "/services/alum6.jpg",
+              "/services/Alum1.jpg",
+              "/services/Alum2.jpg",
+              "/services/Alum3.jpg",
+              "/services/Alum4.jpg",
+              "/services/Alum5.jpg",
+              "/services/Alum6.jpg",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-4" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>

@@ -159,7 +159,7 @@ export default function GarageDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/gar1.jpg"
+                  src="/services/Gar1.jpg"
                   alt={t.types.sectional.title}
                   width={400}
                   height={250}
@@ -174,7 +174,7 @@ export default function GarageDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/gar2.jpg"
+                  src="/services/Gar2.jpg"
                   alt={t.types.roller.title}
                   width={400}
                   height={250}
@@ -189,7 +189,7 @@ export default function GarageDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/gar3.jpg"
+                  src="/services/Gar3.jpg"
                   alt={t.types.overhead.title}
                   width={400}
                   height={250}
@@ -235,10 +235,10 @@ export default function GarageDoorsPage({ params }) {
 
           <div className="row g-4 justify-content-center">
             {[
-              "/services/gar1.jpg",
-              "/services/gar2.jpg",
-              "/services/gar3.jpg",
-              "/services/gar4.jpg",
+              "/services/Gar1.jpg",
+              "/services/Gar2.jpg",
+              "/services/Gar3.jpg",
+              "/services/Gar4.jpg",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-3" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>

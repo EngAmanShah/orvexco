@@ -236,9 +236,9 @@ export default function HighSpeedDoorsPage({ params }) {
           <div className="row g-4 justify-content-center">
             {[
               "/services/High1.jpg",
-              "/services/high2.jpg",
-              "/services/high3.jpg",
-              "/services/high4.jpg",
+              "/services/High2.jpg",
+              "/services/High3.jpg",
+              "/services/High4.jpg",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-3" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>

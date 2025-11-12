@@ -38,8 +38,6 @@ const translations = {
       title: "Why Choose Our Fire Doors",
       description: "Our Fire Rated Doors are designed following international fire safety standards, ensuring top protection and modern style. Available in a variety of sizes, finishes, and materials, they seamlessly blend functionality and design."
     },
-   
-    
   },
   ar: {
     title: "أبواب مقاومة للحريق | YouMats",
@@ -78,8 +76,9 @@ const translations = {
 };
 
 export default function FireDoorsPage({ params }) {
-  // Extract lang from params like in your working component
-  const { lang } = params;
+  // Extract lang from params using React.use() for Next.js 15
+  const unwrappedParams = React.use(params);
+  const { lang } = unwrappedParams;
   const t = translations[lang] || translations.en;
   const isRTL = lang === 'ar';
 
@@ -137,7 +136,7 @@ export default function FireDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/fir1.jpg"
+                  src="/services/fir1.png"
                   alt={t.types.singleLeaf.title}
                   width={400}
                   height={250}
@@ -152,7 +151,7 @@ export default function FireDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/fir2.jpg"
+                  src="/services/fir2.png"
                   alt={t.types.doubleLeaf.title}
                   width={400}
                   height={250}
@@ -167,7 +166,7 @@ export default function FireDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/fir3.jpg"
+                  src="/services/fir3.png"
                   alt={t.types.glazed.title}
                   width={400}
                   height={250}
@@ -189,10 +188,10 @@ export default function FireDoorsPage({ params }) {
 
           <div className="row g-4 justify-content-center">
             {[
-              "/services/fir1.jpg",
-              "/services/fir2.jpg",
-              "/services/fir3.jpg",
-              "/services/fir4.jpg",
+              "/services/fir1.png",
+              "/services/fir2.png",
+              "/services/fir3.png",
+              "/services/fir4.png",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-3" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>
@@ -216,10 +215,6 @@ export default function FireDoorsPage({ params }) {
         <div className="mx-auto mb-3" style={{ width: "100px", height: "3px", background: "#c89f4f" }}></div>
         <p className="text-muted fs-5">{t.whyChoose.description}</p>
       </section>
-
-      {/* 🔹 Footer */}
-     
-     
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
