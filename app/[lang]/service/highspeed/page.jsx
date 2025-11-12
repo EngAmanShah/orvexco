@@ -174,7 +174,7 @@ export default function HighSpeedDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/high2.jpg"
+                  src="/services/High2.jpg"
                   alt={t.types.heavyDuty.title}
                   width={400}
                   height={250}
@@ -189,7 +189,7 @@ export default function HighSpeedDoorsPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/high3.jpg"
+                  src="/services/High3.jpg"
                   alt={t.types.insulated.title}
                   width={400}
                   height={250}
