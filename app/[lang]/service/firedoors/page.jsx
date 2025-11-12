@@ -191,7 +191,7 @@ export default function FireDoorsPage({ params }) {
               "/services/fir1.png",
               "/services/fir2.png",
               "/services/fir3.png",
-              "/services/fir4.png",
+              "/services/fir4.jpg",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-3" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>
