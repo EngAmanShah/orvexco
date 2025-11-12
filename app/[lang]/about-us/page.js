@@ -4,7 +4,7 @@ import AboutUs from "../../../components/AboutUs/AboutUS";
 export async function generateMetadata({ params }) {
   const lang = params.lang || "en";
 
-const content = {
+ const content = {
   en: {
     title: "About ORVEXCO | Engineering Strength, Building the Future",
     description:
@@ -15,9 +15,7 @@ const content = {
     description:
       "تأسست شركة أورفكسو في الولايات المتحدة عام 2009 باسم CIL، وتوسعت إلى الكويت في عام 2010، وتم تسجيلها رسميًا في عام 2024. عززت الشركة وجودها في المملكة العربية السعودية عام 2025، وتقدم حلولًا هندسية وصناعية مبتكرة في مجالات البناء والتصنيع والعمارة.",
   },
-};
-
-
+ };
   const t = content[lang];
 
   return {
