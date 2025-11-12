@@ -1,351 +1,233 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function FireDoorsPage({ params }) {
-  const { lang } = use(params);
-  const isArabic = lang === "ar";
-  const [quantity, setQuantity] = useState(1);
-
-  const productData = {
-    en: {
-      product: {
-        title: "Fire door SFFECO galvanized steel with Bottom Louver Model SF/DD",
-        specs: "Double Door leaf size 1950×1900 mm Color Beige",
-        views: "(1863 Product Views)",
-        status: "in stock",
-        description: "Fire-resistant doors from SFFECO Model SF / DD, size 1950 x 1900 mm, Beige color, made of Galvanized Steel to comply with various architectural requirements, applications include the entrances of industrial buildings, and the service doors of commercial stores, and they are also widely used as partition or external doors in Electrical and petrochemical factories, Available now in the highest quality. Delivery available.",
-        fullDescription: "Fire-Resistant Doors from SFFECO, made of Galvanized Steel to comply with various architectural requirements, applications include the entrances of industrial buildings, and the service doors of commercial stores, and they are also widely used as partition or external doors in Electrical and petrochemical factories, Available now in the highest quality.",
-        specifications: [
-          { label: "Model", value: "SF/DD" },
-          { label: "Door Width", value: "1900 mm" },
-          { label: "Door Height", value: "1950 mm" },
-          { label: "Door Depth", value: "45 mm" },
-          { label: "Door color", value: "Beige" },
-          { label: "Material", value: "Galvanized Steel" },
-          { label: "Fire Rating", value: "120 minutes" },
-          { label: "Features", value: "Bottom Louver" }
-        ],
-        note: "Colors and sizes are available as per customer request."
-      },
-      relatedProducts: [
-        {
-          category: "Fire Rated Doors",
-          title: "Fire door SFFECO stainless steel without Window Model SF/SD",
-          specs: "Single Door leaf size 1950×900 mm Color Red",
-          description: "Fire-resistant doors from SFFECO company Model SF / SD, size 1950×900 mm, Red color...",
-          status: "in stock",
-          image: "/services/fir1.jpg"
-        },
-        {
-          category: "Fire Rated Doors",
-          title: "Fire door Alsafi Cold rolled steel with square glass window",
-          specs: "Single Door leaf size 794 × 1934 mm Frame size 900 × 2000 mm Color Red",
-          description: "Fire door Alsafi with a small square glass window, model SF-DD Single Door leaf s...",
-          status: "in stock",
-          image: "/services/fir2.jpg"
-        },
-        {
-          category: "Fire Rated Doors",
-          title: "Fire door SFFECO stainless steel with square glass window",
-          specs: "Double Door leaf size 1900 × 1950 mm Color Red",
-          description: "Fire-resistant doors from SFFECO Model SF / DD, size 1950 x 1900 mm, Red color...",
-          status: "in stock",
-          image: "/services/fir3.jpg"
-        }
-      ],
-      buttons: {
-        getQuote: "Get Quote",
-        callNow: "Call Now",
-        chatNow: "Chat Now"
-      },
-      sections: {
-        productDescription: "Product description",
-        relatedProducts: "Related products"
-      },
-      quantityText: "Quantity"
+const translations = {
+  en: {
+    title: "Fire Rated Doors | YouMats",
+    description: "Fire Rated Doors – Engineered for safety and durability.",
+    hero: {
+      title: "Fire Rated Doors",
+      subtitle: "Engineered for Safety, Built to Last"
     },
-    ar: {
-      product: {
-        title: "باب حريق SFFECO فولاذ مجلفن مع فتحة تهوية سفلية موديل SF/DD",
-        specs: "مقاس ورقة الباب المزدوج 1950×1900 ملم لون بيج",
-        views: "(1863 مشاهدة للمنتج)",
-        status: "متوفر",
-        description: "أبواب مقاومة للحريق من SFFECO موديل SF/DD، مقاس 1950 × 1900 ملم، لون بيج، مصنوعة من الفولاذ المجلفن لتتوافق مع متطلبات الهندسة المعمارية المختلفة، تشمل التطبيقات مداخل المباني الصناعية، وأبواب الخدمة للمتاجر التجارية، وتستخدم على نطاق واسع كأبواب تقسيم أو أبواب خارجية في المصانع الكهربائية والبتروكيماوية، متوفرة الآن بأعلى جودة. توصيل متاح.",
-        fullDescription: "أبواب مقاومة للحريق من SFFECO، مصنوعة من الفولاذ المجلفن لتتوافق مع متطلبات الهندسة المعمارية المختلفة، تشمل التطبيقات مداخل المباني الصناعية، وأبواب الخدمة للمتاجر التجارية، وتستخدم على نطاق واسع كأبواب تقسيم أو أبواب خارجية في المصانع الكهربائية والبتروكيماوية، متوفرة الآن بأعلى جودة.",
-        specifications: [
-          { label: "الموديل", value: "SF/DD" },
-          { label: "عرض الباب", value: "1900 ملم" },
-          { label: "ارتفاع الباب", value: "1950 ملم" },
-          { label: "عمق الباب", value: "45 ملم" },
-          { label: "لون الباب", value: "بيج" },
-          { label: "المادة", value: "فولاذ مجلفن" },
-          { label: "مقاومة الحريق", value: "120 دقيقة" },
-          { label: "المميزات", value: "فتحة تهوية سفلية" }
-        ],
-        note: "الألوان والمقاسات متوفرة حسب طلب العميل."
+    about: {
+      title: "About Fire Rated Doors",
+      description: "Fire-rated doors are specially engineered to resist fire and smoke, ensuring the safety of buildings and their occupants. Ideal for industrial, commercial, and residential spaces, these doors provide both safety and long-lasting durability. Manufactured from high-grade galvanized or stainless steel, they offer unmatched performance and reliability."
+    },
+    types: {
+      title: "Types of Fire Rated Doors",
+      singleLeaf: {
+        title: "Single Leaf Fire Door",
+        description: "Ideal for compact spaces, offering excellent fire resistance and sleek design."
       },
-      relatedProducts: [
-        {
-          category: "أبواب مقاومة للحريق",
-          title: "باب حريق SFFECO ستانلس ستيل بدون نافذة موديل SF/SD",
-          specs: "مقاس ورقة الباب المفرد 1950×900 ملم لون أحمر",
-          description: "أبواب مقاومة للحريق من شركة SFFECO موديل SF/SD، مقاس 1950×900 ملم، لون أحمر...",
-          status: "متوفر",
-          image: "/services/fir1.jpg"
-        },
-        {
-          category: "أبواب مقاومة للحريق",
-          title: "باب حريق الصفوي صلب مدلفن بارد مع نافذة زجاجية مربعة",
-          specs: "مقاس ورقة الباب المفرد 794 × 1934 ملم مقاس الإطار 900 × 2000 ملم لون أحمر",
-          description: "باب حريق الصفوي مع نافذة زجاجية مربعة صغيرة، موديل SF-DD ورقة باب مفرد...",
-          status: "متوفر",
-          image: "/services/fir2.jpg"
-        },
-        {
-          category: "أبواب مقاومة للحريق",
-          title: "باب حريق SFFECO ستانلس ستيل مع نافذة زجاجية مربعة",
-          specs: "مقاس ورقة الباب المزدوج 1900 × 1950 ملم لون أحمر",
-          description: "أبواب مقاومة للحريق من SFFECO موديل SF/DD، مقاس 1950 × 1900 ملم، لون أحمر...",
-          status: "متوفر",
-          image: "/services/fir3.jpg"
-        }
-      ],
-      buttons: {
-        getQuote: "اطلب عرض سعر",
-        callNow: "اتصل الآن",
-        chatNow: "محادثة"
+      doubleLeaf: {
+        title: "Double Leaf Fire Door",
+        description: "Designed for large openings and high-traffic areas, ensuring maximum protection."
       },
-      sections: {
-        productDescription: "وصف المنتج",
-        relatedProducts: "منتجات ذات صلة"
-      },
-      quantityText: "الكمية"
-    }
-  };
-
-  const content = productData[lang] || productData.en;
-
-  const incrementQuantity = () => setQuantity(prev => prev + 1);
-  const decrementQuantity = () => setQuantity(prev => prev > 1 ? prev - 1 : 1);
-
-  // Fallback image component to handle missing images
-  const ImageWithFallback = ({ src, alt, className, fill = false, ...props }) => {
-    const [imgSrc, setImgSrc] = useState(src);
+      glazed: {
+        title: "Glazed Fire Door",
+        description: "Combines transparency with safety, allowing visibility without compromising protection."
+      }
+    },
+    gallery: {
+      title: "Gallery"
+    },
+    whyChoose: {
+      title: "Why Choose Our Fire Doors",
+      description: "Our Fire Rated Doors are designed following international fire safety standards, ensuring top protection and modern style. Available in a variety of sizes, finishes, and materials, they seamlessly blend functionality and design."
+    },
+   
     
-    return (
-      <Image
-        src={imgSrc}
-        alt={alt}
-        className={className}
-        fill={fill}
-        onError={() => setImgSrc("/placeholder.jpg")}
-        {...props}
-      />
-    );
-  };
+  },
+  ar: {
+    title: "أبواب مقاومة للحريق | YouMats",
+    description: "أبواب مقاومة للحريق – مصممة هندسياً للأمان والمتانة.",
+    hero: {
+      title: "أبواب مقاومة للحريق",
+      subtitle: "مصممة هندسياً للأمان، مبنية لتدوم"
+    },
+    about: {
+      title: "عن الأبواب المقاومة للحريق",
+      description: "الأبواب المقاومة للحريق مصممة هندسياً خصيصاً لمقاومة الحريق والدخان، مما يضمن سلامة المباني والقاطنين فيها. مثالية للمساحات الصناعية والتجارية والسكنية، توفر هذه الأبواب كل من السلامة والمتانة طويلة الأمد. مصنوعة من الفولاذ المجلفن عالي الجودة أو الفولاذ المقاوم للصدأ، تقدم أداءً وموثوقية لا مثيل لهما."
+    },
+    types: {
+      title: "أنواع الأبواب المقاومة للحريق",
+      singleLeaf: {
+        title: "باب حريق ذو ورقة واحدة",
+        description: "مثالي للمساحات المضغوطة، يقدم مقاومة ممتازة للحريق وتصميم أنيق."
+      },
+      doubleLeaf: {
+        title: "باب حريق ذو ورقتين",
+        description: "مصمم للفتحات الكبيرة والمناطق عالية الازدحام، يضمن أقصى حماية."
+      },
+      glazed: {
+        title: "باب حريق زجاجي",
+        description: "يجمع بين الشفافية والسلامة، مما يسمح بالرؤية دون المساس بالحماية."
+      }
+    },
+    gallery: {
+      title: "معرض الصور"
+    },
+    whyChoose: {
+      title: "لماذا تختار أبوابنا المقاومة للحريق",
+      description: "تم تصميم أبوابنا المقاومة للحريق وفقاً لمعايير السلامة من الحريق الدولية، مما يضمن أعلى حماية وطراز حديث. متوفرة بمجموعة متنوعة من الأحجام والنهائيات والمواد، تدمج بسلاسة بين الوظيفة والتصميم."
+    },
+  }
+};
+
+export default function FireDoorsPage({ params }) {
+  // Extract lang from params like in your working component
+  const { lang } = params;
+  const t = translations[lang] || translations.en;
+  const isRTL = lang === 'ar';
 
   return (
     <>
       <Head>
-        <title>{content.product.title} | YouMats</title>
-        <meta name="description" content={content.product.description} />
+        <title>{t.title}</title>
+        <meta name="description" content={t.description} />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        {isRTL && (
+          <style>
+            {`
+              body { direction: rtl; text-align: right; }
+              .start-50 { right: 50% !important; left: auto !important; }
+              .translate-middle { transform: translate(50%, -50%) !important; }
+              .text-start { text-align: right !important; }
+              .text-end { text-align: left !important; }
+            `}
+          </style>
+        )}
       </Head>
 
-      <section dir={isArabic ? "rtl" : "ltr"} className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <header className="bg-white border-b border-gray-200 py-3 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-gray-500 text-sm">YouMats</h1>
-          </div>
-        </header>
+      {/* 🔹 Hero Section */}
+      <section className="position-relative w-100" style={{ height: "85vh" }}>
+        <Image
+          src="/services/hero.jpg"
+          alt={t.hero.title}
+          fill
+          className="object-fit-cover"
+          priority
+        />
+        <div className={`position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-4 rounded-3 ${isRTL ? 'rtl-text' : ''}`}>
+          <h1 className="display-4 fw-bold">{t.hero.title}</h1>
+          <p className="lead mb-0">{t.hero.subtitle}</p>
+        </div>
+      </section>
 
-        {/* Main Product Section */}
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-            {/* Product Title and Views */}
-            <div className="mb-4">
-              <h1 className="text-xl font-bold text-gray-900 mb-2">
-                {content.product.title}
-              </h1>
-              <p className="text-gray-600 text-sm mb-1">{content.product.specs}</p>
-              <p className="text-gray-400 text-xs">{content.product.views}</p>
-            </div>
+      {/* 🔹 Intro Section */}
+      <section className="container py-5">
+        <div className={`text-center mb-4 ${isRTL ? 'rtl-text' : ''}`}>
+          <h2 className="fw-bold text-dark">{t.about.title}</h2>
+          <div className="mx-auto mb-3" style={{ width: "100px", height: "3px", background: "#c89f4f" }}></div>
+          <p className="text-muted fs-5">{t.about.description}</p>
+        </div>
+      </section>
 
-            {/* Product Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Product Images */}
-              <div className="space-y-4">
-                <div className="relative h-80 bg-gray-100 rounded-lg overflow-hidden">
-                  <ImageWithFallback
-                    src="/services/hero.jpg"
-                    alt={content.product.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="grid grid-cols-3 gap-2">
-                  {["/services/fir1.jpg", "/services/fir2.jpg", "/services/fir3.jpg"].map((src, index) => (
-                    <div key={index} className="relative h-24 bg-gray-100 rounded-md overflow-hidden">
-                      <ImageWithFallback
-                        src={src}
-                        alt={`${content.product.title} ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+      {/* 🔹 Types Section */}
+      <section className="py-5 bg-light">
+        <div className="container text-center">
+          <h2 className="fw-bold text-dark mb-4">{t.types.title}</h2>
+          <div className="mx-auto mb-4" style={{ width: "100px", height: "3px", background: "#c89f4f" }}></div>
 
-              {/* Product Details */}
-              <div className="space-y-6">
-                {/* Stock Status */}
-                <div className="flex items-center justify-between">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    content.product.status === "in stock" || content.product.status === "متوفر" 
-                      ? "bg-green-100 text-green-800" 
-                      : "bg-red-100 text-red-800"
-                  }`}>
-                    {content.product.status}
-                  </span>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-700 leading-relaxed">
-                  {content.product.description}
-                </p>
-
-                {/* Quantity Selector */}
-                <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                  <span className="text-gray-700 font-medium">{content.quantityText}</span>
-                  <div className="flex items-center border border-gray-300 rounded-lg">
-                    <button 
-                      onClick={decrementQuantity}
-                      className="px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors"
-                    >
-                      -
-                    </button>
-                    <span className="px-4 py-2 border-l border-r border-gray-300 min-w-12 text-center">
-                      {quantity}
-                    </span>
-                    <button 
-                      onClick={incrementQuantity}
-                      className="px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                    <span>📄</span>
-                    {content.buttons.getQuote}
-                  </button>
-                  <button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                    <span>📞</span>
-                    {content.buttons.callNow}
-                  </button>
-                  <button className="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                    <span>💬</span>
-                    {content.buttons.chatNow}
-                  </button>
-                </div>
+          <div className="row g-4 text-center">
+            {/* Single Leaf */}
+            <div className="col-md-4">
+              <div className="card h-100 border-0 shadow-sm p-3">
+                <Image
+                  src="/services/fir1.jpg"
+                  alt={t.types.singleLeaf.title}
+                  width={400}
+                  height={250}
+                  className="rounded img-fluid object-fit-cover"
+                />
+                <h5 className="mt-3 fw-bold">{t.types.singleLeaf.title}</h5>
+                <p className="text-muted">{t.types.singleLeaf.description}</p>
               </div>
             </div>
-          </div>
 
-          {/* Product Description Section */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">
-              {content.sections.productDescription}
-            </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              {content.product.fullDescription}
-            </p>
-            
-            {/* Specifications */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              {content.product.specifications.map((spec, index) => (
-                <div key={index} className="flex border-b border-gray-100 py-2">
-                  <span className="font-medium text-gray-600 min-w-32 rtl:min-w-36">
-                    {spec.label}:
-                  </span>
-                  <span className="text-gray-800">{spec.value}</span>
-                </div>
-              ))}
+            {/* Double Leaf */}
+            <div className="col-md-4">
+              <div className="card h-100 border-0 shadow-sm p-3">
+                <Image
+                  src="/services/fir2.jpg"
+                  alt={t.types.doubleLeaf.title}
+                  width={400}
+                  height={250}
+                  className="rounded img-fluid object-fit-cover"
+                />
+                <h5 className="mt-3 fw-bold">{t.types.doubleLeaf.title}</h5>
+                <p className="text-muted">{t.types.doubleLeaf.description}</p>
+              </div>
             </div>
-            
-            <p className="text-gray-600 text-sm italic">
-              {content.product.note}
-            </p>
-          </div>
 
-          {/* Related Products */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-6">
-              {content.sections.relatedProducts}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {content.relatedProducts.map((product, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="relative h-48 bg-gray-100">
-                    <ImageWithFallback
-                      src={product.image}
-                      alt={product.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <span className="text-xs text-blue-600 font-medium mb-1 block">
-                      {product.category}
-                    </span>
-                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">
-                      {product.title}
-                    </h3>
-                    <p className="text-gray-600 text-xs mb-2">
-                      {product.specs}
-                    </p>
-                    <p className="text-gray-500 text-xs mb-3 line-clamp-2">
-                      {product.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-green-600 text-xs font-medium">
-                        {product.status}
-                      </span>
-                      <div className="flex items-center gap-1">
-                        <button className="text-gray-500 hover:text-gray-700 p-1">
-                          📄
-                        </button>
-                        <button className="text-gray-500 hover:text-gray-700 p-1">
-                          📞
-                        </button>
-                        <button className="text-gray-500 hover:text-gray-700 p-1">
-                          💬
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* Glazed */}
+            <div className="col-md-4">
+              <div className="card h-100 border-0 shadow-sm p-3">
+                <Image
+                  src="/services/fir3.jpg"
+                  alt={t.types.glazed.title}
+                  width={400}
+                  height={250}
+                  className="rounded img-fluid object-fit-cover"
+                />
+                <h5 className="mt-3 fw-bold">{t.types.glazed.title}</h5>
+                <p className="text-muted">{t.types.glazed.description}</p>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-8 mt-12">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 YouMats. All Rights Reserved.
-            </p>
-          </div>
-        </footer>
       </section>
+
+      {/* 🔹 Gallery Section */}
+      <section className="py-5">
+        <div className="container text-center">
+          <h2 className="fw-bold text-dark mb-4">{t.gallery.title}</h2>
+          <div className="mx-auto mb-4" style={{ width: "100px", height: "3px", background: "#c89f4f" }}></div>
+
+          <div className="row g-4 justify-content-center">
+            {[
+              "/services/fir1.jpg",
+              "/services/fir2.jpg",
+              "/services/fir3.jpg",
+              "/services/fir4.jpg",
+            ].map((src, index) => (
+              <div className="col-6 col-md-4 col-lg-3" key={index}>
+                <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>
+                  <Image
+                    src={src}
+                    alt={`${t.types.singleLeaf.title} ${index + 1}`}
+                    width={400}
+                    height={250}
+                    className="img-fluid rounded object-fit-cover w-100 h-100"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 🔹 Why Choose Section */}
+      <section className="container py-5 text-center">
+        <h2 className="fw-bold text-dark">{t.whyChoose.title}</h2>
+        <div className="mx-auto mb-3" style={{ width: "100px", height: "3px", background: "#c89f4f" }}></div>
+        <p className="text-muted fs-5">{t.whyChoose.description}</p>
+      </section>
+
+      {/* 🔹 Footer */}
+     
+     
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+      <style jsx>{`
+        .rtl-text {
+          direction: rtl;
+        }
+      `}</style>
     </>
   );
 }

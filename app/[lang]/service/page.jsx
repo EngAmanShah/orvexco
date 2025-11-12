@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { GiSteelDoor } from "react-icons/gi";
 import { MdOutlineSpeed, MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { RiWindow2Line } from "react-icons/ri";
 import Skills from "@/components/Skills/Skills";
 
 export default function ServicesPage({ params }) {
@@ -67,6 +68,13 @@ export default function ServicesPage({ params }) {
           icon: <MdOutlinePrecisionManufacturing size={40} color="#fff" />,
           link: `/en/service/steel`,
         },
+        {
+          title: "Aluminum & FRP Windows",
+          description:
+            "Weatherproof, thermally efficient windows for commercial, residential, and industrial buildings.",
+          icon: <RiWindow2Line size={40} color="#fff" />,
+          link: `/en/service/windows`,
+        },
       ],
     },
     ar: {
@@ -117,6 +125,13 @@ export default function ServicesPage({ params }) {
             "تصنيع وتركيب دقيق لهياكل فولاذية عالية الجودة.",
           icon: <MdOutlinePrecisionManufacturing size={40} color="#fff" />,
           link: `/ar/service/steel`,
+        },
+        {
+          title: "نوافذ الألومنيوم والفايبرجلاس",
+          description:
+            "نوافذ مقاومة للعوامل الجوية وفعالة حرارياً للمباني التجارية والسكنية والصناعية.",
+          icon: <RiWindow2Line size={40} color="#fff" />,
+          link: `/ar/service/windows`,
         },
       ],
     },

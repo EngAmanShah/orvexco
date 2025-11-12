@@ -8,21 +8,26 @@ import {
   FaBullhorn,
   FaPaintBrush,
   FaServer,
-  }
- from "react-icons/fa";
- import { motion } from "framer-motion";
- import styles from "./aboutus.module.css";
- export default function AboutUs({ params }) {
+  FaDoorOpen,
+  FaTools,
+  FaShieldAlt,
+} from "react-icons/fa";
+import { GiSteelDoor } from "react-icons/gi";
+import { MdOutlineSpeed, MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { RiWindow2Line } from "react-icons/ri";
+import { motion } from "framer-motion";
+import styles from "./aboutus.module.css";
+
+export default function AboutUs({ params }) {
   const resolvedParams = use(params);
   const currentLang = resolvedParams?.lang || "en";
-
   const router = useRouter();
 
   const starCanvasHero = useRef(null);
   const starCanvasStory = useRef(null);
   const starCanvasServices = useRef(null);
 
-   //Starfield Animation
+  // Starfield Animation
   const useStarfield = (canvasRef) => {
     useEffect(() => {
       const canvas = canvasRef.current;
@@ -80,109 +85,102 @@ import {
   const content = {
     en: {
       heroTitle: "About ORVEXCO",
-      heroSubtitle:
-        "Engineering Strength — Building the Future with Iron, Aluminum, and Solar Energy.",
-      heroExtra:
-        "Orvexco is a multidisciplinary engineering and software solutions company that operates across industrial and digital sectors. With a strong foundation in innovation and reliability, we specialize in delivering end-to-end engineering, construction, IT, and digital transformation services.",
-      history:
-        "Team Orvexco was established in the USA in 2009 as CIL, expanded to Kuwait in 2010 (officially registered in 2024), and further strengthened its presence in Saudi Arabia in 2025. With a strong engineering foundation and years of technical expertise, Orvexco has built a solid reputation for delivering innovative and reliable solutions in the construction, architectural, and digital sectors. Under the leadership of a new generation of engineers, Orvexco continues to evolve — focusing on modernization, sustainability, and excellence. Our mission is simple — to engineer progress, build trust, and empower clients with reliable technology and sustainable infrastructure.",
+      heroSubtitle: "Engineering Strength — Building the Future with Iron, Aluminum, and Solar Energy.",
+      heroExtra: "Orvexco is a multidisciplinary engineering and software solutions company that operates across industrial and digital sectors. With a strong foundation in innovation and reliability, we specialize in delivering end-to-end engineering, construction, IT, and digital transformation services.",
+      history: "Team Orvexco was established in the USA in 2009 as CIL, expanded to Kuwait in 2010 (officially registered in 2024), and further strengthened its presence in Saudi Arabia in 2025. With a strong engineering foundation and years of technical expertise, Orvexco has built a solid reputation for delivering innovative and reliable solutions in the construction, architectural, and digital sectors. Under the leadership of a new generation of engineers, Orvexco continues to evolve — focusing on modernization, sustainability, and excellence. Our mission is simple — to engineer progress, build trust, and empower clients with reliable technology and sustainable infrastructure.",
       servicesTitle: "Our Expertise",
       storyHeading: "Our Journey",
       buttons: {
-        industry: "Industrial Solutions",
-        solar: "Solar Systems",
-        fabrication: "Fabrication Works",
-        project: "Project Management",
-        construction: "Construction Services",
-        digital: "Digital Solutions",
+        viewDetails: "View Details",
       },
     },
-   ar: {
+    ar: {
       heroTitle: "عن أورفكسو",
-      heroSubtitle:
-        "قوة الهندسة — نبني المستقبل من الحديد والألمنيوم والطاقة الشمسية.",
-      heroExtra:
-        "أورفكسو هي شركة متعددة التخصصات في مجالات الهندسة والبرمجيات، تعمل في القطاعات الصناعية والرقمية. بفضل أساسها القوي من الابتكار والموثوقية، تتخصص أورفكسو في تقديم خدمات متكاملة في الهندسة والبناء والتحول الرقمي.",
-      history:
-        "تأسس فريق أورفكسو في الولايات المتحدة الأمريكية عام 2009 باسم CIL، وتوسع إلى الكويت في عام 2010 (وسُجل رسميًا في عام 2024)، وعزز وجوده في المملكة العربية السعودية في عام 2025. بفضل خبراتها الهندسية القوية وسنوات من الكفاءة التقنية، بنت أورفكسو سمعة راسخة في تقديم حلول مبتكرة وموثوقة في مجالات البناء والهندسة المعمارية والخدمات الرقمية. تحت قيادة الجيل الجديد من المهندسين، تواصل أورفكسو التطور والتركيز على التحديث والاستدامة والتميز. مهمتنا بسيطة — هندسة التقدم، وبناء الثقة، وتمكين العملاء من خلال التكنولوجيا الموثوقة والبنية التحتية المستدامة.",
+      heroSubtitle: "قوة الهندسة — نبني المستقبل من الحديد والألمنيوم والطاقة الشمسية.",
+      heroExtra: "أورفكسو هي شركة متعددة التخصصات في مجالات الهندسة والبرمجيات، تعمل في القطاعات الصناعية والرقمية. بفضل أساسها القوي من الابتكار والموثوقية، تتخصص أورفكسو في تقديم خدمات متكاملة في الهندسة والبناء والتحول الرقمي.",
+      history: "تأسس فريق أورفكسو في الولايات المتحدة الأمريكية عام 2009 باسم CIL، وتوسع إلى الكويت في عام 2010 (وسُجل رسميًا في عام 2024)، وعزز وجوده في المملكة العربية السعودية في عام 2025. بفضل خبراتها الهندسية القوية وسنوات من الكفاءة التقنية، بنت أورفكسو سمعة راسخة في تقديم حلول مبتكرة وموثوقة في مجالات البناء والهندسة المعمارية والخدمات الرقمية. تحت قيادة الجيل الجديد من المهندسين، تواصل أورفكسو التطور والتركيز على التحديث والاستدامة والتميز. مهمتنا بسيطة — هندسة التقدم، وبناء الثقة، وتمكين العملاء من خلال التكنولوجيا الموثوقة والبنية التحتية المستدامة.",
       servicesTitle: "مجالات خبرتنا",
       storyHeading: "رحلتنا",
       buttons: {
-        industry: "الحلول الصناعية",
-        solar: "أنظمة الطاقة الشمسية",
-        fabrication: "أعمال التصنيع",
-        project: "إدارة المشاريع",
-        construction: "خدمات البناء",
-        digital: "الحلول الرقمية",
+        viewDetails: "عرض التفاصيل",
       },
     },
   };
 
   const t = content[currentLang];
 
- const services = [
-  {
-    image: "/fire-door.gif",
-    title: { en: "Fire Rated Doors (Steel/Wood/Glass)", ar: "أبواب مقاومة للحريق (فولاذ / خشب / زجاج)" },
-    text: {
-      en: "Certified fire-rated doors designed for safety and durability in commercial and industrial applications.",
-      ar: "أبواب معتمدة مقاومة للحريق توفر الأمان والمتانة في البيئات التجارية والصناعية.",
+  const services = [
+    {
+      image: "/fire-door.gif",
+      title: { en: "Fire Rated Doors", ar: "الأبواب المقاومة للحريق" },
+      text: {
+        en: "Certified fire-rated steel, wood, and glass doors designed for safety and performance.",
+        ar: "أبواب فولاذية وخشبية وزجاجية مقاومة للحريق معتمدة للأمان والأداء.",
+      },
+      link: `/${currentLang}/service/firedoors`,
+      icon: <FaDoorOpen size={40} color="#fff" />,
     },
-    link: "/service/firedoor",
-    btnKey: "industry",
-  },
-  {
-    image: "/services/fabric-door.gif",
-    title: { en: "High Speed Fabric Doors", ar: "أبواب قماشية عالية السرعة" },
-    text: {
-      en: "Fast, reliable, and durable fabric doors ideal for industrial environments requiring efficient access.",
-      ar: "أبواب سريعة وموثوقة مصممة لزيادة كفاءة الحركة في المصانع والمنشآت.",
+    {
+      image: "/services/fabric-door.gif",
+      title: { en: "High Speed Fabric Doors", ar: "الأبواب القماشية عالية السرعة" },
+      text: {
+        en: "Fast and reliable fabric doors ideal for industrial environments requiring efficiency.",
+        ar: "أبواب سريعة وموثوقة مناسبة للبيئات الصناعية التي تتطلب الكفاءة.",
+      },
+      link: `/${currentLang}/service/highspeed`,
+      icon: <MdOutlineSpeed size={40} color="#fff" />,
     },
-    link: "/service/fabricdoor",
-    btnKey: "solar",
-  },
-  {
-    image: "/services/garage-door.gif",
-    title: { en: "Garage Doors", ar: "أبواب الجراج" },
-    text: {
-      en: "Strong, secure, and customizable garage doors for residential, commercial, and industrial spaces.",
-      ar: "أبواب قوية وآمنة وقابلة للتخصيص للمنازل والمنشآت التجارية والصناعية.",
+    {
+      image: "/services/garage-door.gif",
+      title: { en: "Garage Doors", ar: "أبواب الجراج" },
+      text: {
+        en: "Secure, customizable garage doors suitable for all property types.",
+        ar: "أبواب آمنة وقابلة للتخصيص مناسبة لجميع أنواع الممتلكات.",
+      },
+      link: `/${currentLang}/service/garage`,
+      icon: <FaTools size={40} color="#fff" />,
     },
-    link: "/service/garagedoor",
-    btnKey: "fabrication",
-  },
-  {
-    image: "/services/rolling-shutter.gif",
-    title: { en: "Rolling Shutter Doors", ar: "أبواب الدحرجة المقاومة للحريق" },
-    text: {
-      en: "Fire-rated rolling shutters offering safety and performance for industrial and commercial use.",
-      ar: "أبواب دحرجة مقاومة للحريق توفر الأمان والأداء العالي للمشاريع الصناعية والتجارية.",
+    {
+      image: "/services/rolling-shutter.gif",
+      title: { en: "Rolling Shutter Doors", ar: "أبواب الدحرجة المقاومة للحريق" },
+      text: {
+        en: "Durable and fire-rated rolling shutters for industrial and commercial facilities.",
+        ar: "أبواب دحرجة مقاومة للحريق ومتينة للاستخدام الصناعي والتجاري.",
+      },
+      link: `/${currentLang}/service/rolling`,
+      icon: <GiSteelDoor size={40} color="#fff" />,
     },
-    link: "/service/rollingdoor",
-    btnKey: "project",
-  },
-  {
-    image: "/services/bullet-door.gif",
-    title: { en: "Bullet & Blast Resistant Doors", ar: "أبواب مقاومة للرصاص والانفجارات" },
-    text: {
-      en: "Advanced ballistic and blast-resistant doors providing maximum protection and reliability.",
-      ar: "أبواب متقدمة مقاومة للرصاص والانفجارات توفر أقصى درجات الحماية والموثوقية.",
+    {
+      image: "/services/bullet-door.gif",
+      title: { en: "Bullet & Blast Resistant Doors", ar: "الأبواب المقاومة للرصاص والانفجارات" },
+      text: {
+        en: "High-security ballistic and blast-resistant doors providing maximum protection.",
+        ar: "أبواب عالية الأمان توفر أقصى درجات الحماية من الرصاص والانفجارات.",
+      },
+      link: `/${currentLang}/service/bullet`,
+      icon: <FaShieldAlt size={40} color="#fff" />,
     },
-    link: "/service/bulletdoor",
-    btnKey: "construction",
-  },
-  {
-    image: "/services/steel-fabrication.gif",
-    title: { en: "Structural Steel Fabrication", ar: "تصنيع الهياكل الفولاذية" },
-    text: {
-      en: "Precision fabrication and installation of high-quality structural steel for all industrial projects.",
-      ar: "تصنيع دقيق للهياكل الفولاذية عالية الجودة لجميع المشاريع الصناعية.",
+    {
+      image: "/services/steel-fabrication.gif",
+      title: { en: "Structural Steel Fabrication", ar: "تصنيع الهياكل الفولاذية" },
+      text: {
+        en: "Precision fabrication and installation of high-quality structural steel.",
+        ar: "تصنيع وتركيب دقيق لهياكل فولاذية عالية الجودة.",
+      },
+      link: `/${currentLang}/service/steel`,
+      icon: <MdOutlinePrecisionManufacturing size={40} color="#fff" />,
     },
-    link: "/service/steelfab",
-    btnKey: "digital",
-  },
-];
-
+    {
+      image: "/services/windows.gif",
+      title: { en: "Aluminum & FRP Windows", ar: "نوافذ الألومنيوم والفايبرجلاس" },
+      text: {
+        en: "Weatherproof, thermally efficient windows for commercial, residential, and industrial buildings.",
+        ar: "نوافذ مقاومة للعوامل الجوية وفعالة حرارياً للمباني التجارية والسكنية والصناعية.",
+      },
+      link: `/${currentLang}/service/windows`,
+      icon: <RiWindow2Line size={40} color="#fff" />,
+    },
+  ];
 
   return (
     <div className={styles.container}>
@@ -239,7 +237,7 @@ import {
                   className={styles.serviceButton}
                   onClick={() => router.push(s.link)}
                 >
-                  {t.buttons[s.btnKey]}
+                  {t.buttons.viewDetails}
                 </motion.button>
               </motion.div>
             ))}
