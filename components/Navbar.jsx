@@ -137,18 +137,37 @@ export default function Navbar({ lang }) {
           </a>
         </div>
 
-        {/* Mobile toggler */}
-        <button
-          className="navbar-toggler ms-3 d-md-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-          style={lang === "ar" ? { marginLeft: "0", marginRight: "1rem" } : {}}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        {/* Mobile Language Switcher - Now at top near toggler */}
+        <div className="d-md-none d-flex align-items-center">
+          <Link
+            href={pathname?.replace(`/${lang}`, lang === "ar" ? "/en" : "/ar") || "/"}
+            className="btn btn-outline-primary btn-sm d-flex align-items-center justify-content-center me-2"
+            style={{
+              width: "50px",
+              height: "40px",
+              fontWeight: "600",
+              fontSize: "14px",
+              border: "2px solid #0d6efd",
+              borderRadius: "8px",
+              textDecoration: "none",
+              transition: "all 0.3s ease"
+            }}
+          >
+            {lang === "ar" ? "EN" : "ع"}
+          </Link>
+
+          {/* Mobile toggler */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Offcanvas */}
@@ -215,27 +234,8 @@ export default function Navbar({ lang }) {
             ))}
           </ul>
 
-          {/* Mobile Language & WhatsApp Button */}
+          {/* Mobile WhatsApp Button */}
           <div className="mt-3 d-flex flex-column gap-2 align-items-center">
-            {/* Professional Mobile Language Switcher */}
-            <Link
-              href={pathname?.replace(`/${lang}`, lang === "ar" ? "/en" : "/ar") || "/"}
-              className="btn btn-outline-primary d-flex align-items-center justify-content-center"
-              style={{
-                width: "100%",
-                maxWidth: "200px",
-                height: "45px",
-                fontWeight: "600",
-                fontSize: "16px",
-                border: "2px solid #0d6efd",
-                borderRadius: "8px",
-                textDecoration: "none"
-              }}
-              onClick={closeOffcanvas}
-            >
-              {lang === "ar" ? "English (EN)" : "العربية (ع)"}
-            </Link>
-            
             <a
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
@@ -291,6 +291,10 @@ export default function Navbar({ lang }) {
         [dir="rtl"] .ms-auto {
           margin-left: 0 !important;
           margin-right: auto !important;
+        }
+        [dir="rtl"] .me-2 {
+          margin-right: 0 !important;
+          margin-left: 0.5rem !important;
         }
         [dir="rtl"] .ms-3 {
           margin-left: 0 !important;
