@@ -45,19 +45,19 @@ export default function ValueSlider({ lang }) {
       ],
       image: "/Gar2.jpg",
     },
-    {
-      title: "Rolling Shutter Doors",
-      subtitle: "Secure & Durable Industrial Solutions",
-      description: "Manually or Motor Operated Rolling Shutter Door, Vertical rolling type, guided within steel side channels. Suitable for industrial, commercial, warehouse, and parking areas with inside or outside wall face installation.",
-      features: [
-        "Manual or motor operated",
-        "Vertical rolling design",
-        "Steel side channels",
-        "Industrial & commercial use"
-      ],
-       image: "/Fire4.jpg",
-      // image: "/ar.jpg",
-    },
+    // {
+    //   title: "Rolling Shutter Doors",
+    //   subtitle: "Secure & Durable Industrial Solutions",
+    //   description: "Manually or Motor Operated Rolling Shutter Door, Vertical rolling type, guided within steel side channels. Suitable for industrial, commercial, warehouse, and parking areas with inside or outside wall face installation.",
+    //   features: [
+    //     "Manual or motor operated",
+    //     "Vertical rolling design",
+    //     "Steel side channels",
+    //     "Industrial & commercial use"
+    //   ],
+    //    image: "/Fire4.jpg",
+    //   // image: "/ar.jpg",
+    // },
     {
       title: "Bullet & Blast Resistant Doors",
       subtitle: "Maximum Security Protection",
@@ -70,18 +70,18 @@ export default function ValueSlider({ lang }) {
       ],
       image: "/Bul4.jpg",
     },
-    {
-      title: "Structural Steel Fabrication",
-      subtitle: "Precision Engineering & Construction",
-      description: "The work includes the supply, fabrication, welding, surface preparation, painting, delivery, and erection of all structural steel components as per approved drawings and standards for industrial buildings, warehouses, platforms, and structural elements.",
-      features: [
-        "Complete fabrication services",
-        "Welding & surface preparation",
-        "Industrial building structures",
-        "Quality standards compliance"
-      ],
-      image: "/ste.jpg",
-    }
+    // {
+    //   title: "Structural Steel Fabrication",
+    //   subtitle: "Precision Engineering & Construction",
+    //   description: "The work includes the supply, fabrication, welding, surface preparation, painting, delivery, and erection of all structural steel components as per approved drawings and standards for industrial buildings, warehouses, platforms, and structural elements.",
+    //   features: [
+    //     "Complete fabrication services",
+    //     "Welding & surface preparation",
+    //     "Industrial building structures",
+    //     "Quality standards compliance"
+    //   ],
+    //   image: "/ste.jpg",
+    // }
   ];
 
   return (
