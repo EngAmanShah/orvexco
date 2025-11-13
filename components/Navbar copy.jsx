@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
 export default function Navbar({ lang }) {
   const pathname = usePathname();
@@ -28,14 +28,24 @@ export default function Navbar({ lang }) {
     {
       href: "/service",
       label: lang === "ar" ? "الخدمات" : "Services",
+      // children: [
+      //   { href: "/service/webdev", label: lang === "ar" ? "تطوير المواقع" : "Web Development" },
+      //   { href: "/service/appdev", label: lang === "ar" ? "تطوير التطبيقات" : "App Development" },
+      //   { href: "/service/itsolutions", label: lang === "ar" ? "حلول تكنولوجيا المعلومات" : "IT Solutions" },
+      //   { href: "/service/digital-marketing", label: lang === "ar" ? "التسويق الرقمي" : "Digital Marketing" },
+      //   { href: "/service/graphic-design", label: lang === "ar" ? "التصميم الجرافيكي" : "Graphic Designing" },
+      //   { href: "/service/mobile-app", label: lang === "ar" ? "تطوير تطبيقات الهاتف" : "Mobile App Development" },
+      // ],
     },
     { href: "/about-us", label: lang === "ar" ? "من نحن" : "About Us" },
     { href: "/contact-us", label: lang === "ar" ? "اتصل بنا" : "Contact Us" },
+    // { href: "/blog", label: lang === "ar" ? "المدونة" : "Blog" },
   ];
 
   if (!pathname || pathname?.startsWith(`/${lang}/admin`)) return null;
 
   const whatsappNumber = "+966559931444";
+  const callNumber = "+966559931444";
 
   // Function to close offcanvas programmatically
   const closeOffcanvas = () => {
@@ -57,7 +67,6 @@ export default function Navbar({ lang }) {
             }
           : {}
       }
-      dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="container d-flex align-items-center justify-content-between">
         {/* Logo */}
@@ -99,41 +108,19 @@ export default function Navbar({ lang }) {
           ))}
         </ul>
 
-        {/* Desktop Language & WhatsApp Button */}
+        {/* Desktop Language & Action Buttons */}
         <div className="d-none d-md-flex align-items-center ms-auto gap-3">
-          {/* Professional Language Switcher */}
-          <div className="language-switcher">
-            <Link
-              href={pathname?.replace(`/${lang}`, lang === "ar" ? "/en" : "/ar") || "/"}
-              className="btn btn-outline-primary btn-sm d-flex align-items-center justify-content-center"
-              style={{
-                width: "60px",
-                height: "40px",
-                fontWeight: "600",
-                fontSize: "14px",
-                border: "2px solid #0d6efd",
-                borderRadius: "8px",
-                textDecoration: "none",
-                transition: "all 0.3s ease"
-              }}
-            >
-              {lang === "ar" ? "EN" : "ع"}
-            </Link>
-          </div>
-          
+          <LanguageSwitcher lang={lang} />
           <a
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-success d-flex align-items-center gap-2"
-            style={{
-              backgroundColor: "#25D366",
-              borderColor: "#25D366",
-              borderRadius: "8px",
-              fontWeight: "500"
-            }}
           >
             <FaWhatsapp /> {lang === "ar" ? "واتساب" : "WhatsApp"}
+          </a>
+          <a href={`tel:${callNumber}`} className="btn btn-primary d-flex align-items-center gap-2">
+            <FaPhone /> {lang === "ar" ? "اتصل" : "Call"}
           </a>
         </div>
 
@@ -145,7 +132,6 @@ export default function Navbar({ lang }) {
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
-          style={lang === "ar" ? { marginLeft: "0", marginRight: "1rem" } : {}}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -157,11 +143,10 @@ export default function Navbar({ lang }) {
         tabIndex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
-        dir={lang === "ar" ? "rtl" : "ltr"}
       >
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-            {lang === "ar" ? "القائمة" : "Menu"}
+            Menu
           </h5>
           <button
             type="button"
@@ -215,43 +200,22 @@ export default function Navbar({ lang }) {
             ))}
           </ul>
 
-          {/* Mobile Language & WhatsApp Button */}
-          <div className="mt-3 d-flex flex-column gap-2 align-items-center">
-            {/* Professional Mobile Language Switcher */}
-            <Link
-              href={pathname?.replace(`/${lang}`, lang === "ar" ? "/en" : "/ar") || "/"}
-              className="btn btn-outline-primary d-flex align-items-center justify-content-center"
-              style={{
-                width: "100%",
-                maxWidth: "200px",
-                height: "45px",
-                fontWeight: "600",
-                fontSize: "16px",
-                border: "2px solid #0d6efd",
-                borderRadius: "8px",
-                textDecoration: "none"
-              }}
-              onClick={closeOffcanvas}
-            >
-              {lang === "ar" ? "English (EN)" : "العربية (ع)"}
-            </Link>
-            
+          {/* Mobile Language & Action Buttons */}
+          <div className="mt-3 d-flex flex-column gap-2">
+            <LanguageSwitcher lang={lang} />
             <a
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-success d-flex align-items-center gap-2 justify-content-center"
-              style={{
-                width: "100%",
-                maxWidth: "200px",
-                backgroundColor: "#25D366",
-                borderColor: "#25D366",
-                borderRadius: "8px",
-                fontWeight: "500"
-              }}
-              onClick={closeOffcanvas}
             >
               <FaWhatsapp /> {lang === "ar" ? "واتساب" : "WhatsApp"}
+            </a>
+            <a
+              href={`tel:${callNumber}`}
+              className="btn btn-primary d-flex align-items-center gap-2 justify-content-center"
+            >
+              <FaPhone /> {lang === "ar" ? "اتصل" : "Call"}
             </a>
           </div>
         </div>
@@ -272,36 +236,10 @@ export default function Navbar({ lang }) {
           border-radius: 0.5rem;
           transition: all 0.2s ease-in-out;
         }
-        .language-switcher .btn:hover {
-          background-color: #0d6efd;
-          color: white;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
-        }
         @media (min-width: 768px) {
           .navbar-nav .dropdown:hover .dropdown-menu {
             display: block;
           }
-        }
-        /* RTL support */
-        [dir="rtl"] .navbar-brand {
-          margin-right: 0;
-          margin-left: 1rem;
-        }
-        [dir="rtl"] .ms-auto {
-          margin-left: 0 !important;
-          margin-right: auto !important;
-        }
-        [dir="rtl"] .ms-3 {
-          margin-left: 0 !important;
-          margin-right: 1rem !important;
-        }
-        [dir="rtl"] .me-auto {
-          margin-right: 0 !important;
-          margin-left: auto !important;
-        }
-        [dir="rtl"] .dropdown-menu {
-          text-align: right;
         }
       `}</style>
     </nav>
