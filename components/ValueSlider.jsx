@@ -55,7 +55,7 @@ export default function ValueSlider({ lang }) {
         "Steel side channels",
         "Industrial & commercial use"
       ],
-      image: "/ar2.jpg",
+      image: "/ar.jpg",
     },
     {
       title: "Bullet & Blast Resistant Doors",
@@ -79,7 +79,7 @@ export default function ValueSlider({ lang }) {
         "Industrial building structures",
         "Quality standards compliance"
       ],
-      image: "/Ste1.jpg",
+      image: "/ste.jpg",
     }
   ];
 
