@@ -244,7 +244,7 @@ export default function StructuralSteelPage({ params }) {
               "/services/Ste3.jpg",
               "/services/Ste4.jpg",
               "/services/Ste5.jpg",
-              "/services/Ste6.jpg",
+              "/services/ste6.jpg",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-4" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>
