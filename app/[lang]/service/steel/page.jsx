@@ -163,7 +163,7 @@ export default function StructuralSteelPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/ste1.jpg"
+                  src="/services/Ste1.jpg"
                   alt={t.types.industrial.title}
                   width={400}
                   height={250}
@@ -178,7 +178,7 @@ export default function StructuralSteelPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/ste2.jpg"
+                  src="/services/Ste2.jpg"
                   alt={t.types.commercial.title}
                   width={400}
                   height={250}
@@ -193,7 +193,7 @@ export default function StructuralSteelPage({ params }) {
             <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm p-3">
                 <Image
-                  src="/services/ste3.jpg"
+                  src="/services/Ste3.jpg"
                   alt={t.types.specialized.title}
                   width={400}
                   height={250}
@@ -239,12 +239,12 @@ export default function StructuralSteelPage({ params }) {
 
           <div className="row g-4 justify-content-center">
             {[
-              "/services/ste1.jpg",
-              "/services/ste2.jpg",
-              "/services/ste3.jpg",
-              "/services/ste4.jpg",
-              "/services/ste5.jpg",
-              "/services/ste6.jpg",
+              "/services/Ste1.jpg",
+              "/services/Ste2.jpg",
+              "/services/Ste3.jpg",
+              "/services/Ste4.jpg",
+              "/services/Ste5.jpg",
+              "/services/Ste6.jpg",
             ].map((src, index) => (
               <div className="col-6 col-md-4 col-lg-4" key={index}>
                 <div className="card border-0 shadow-sm" style={{ height: "250px", overflow: "hidden" }}>
