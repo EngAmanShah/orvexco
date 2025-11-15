@@ -15,8 +15,10 @@ import { RiWindow2Line } from "react-icons/ri";
 import Skills from "@/components/Skills/Skills";
 
 export default function ServicesPage({ params }) {
-  const { lang } = params;
+  // Fix: Use React.use() to unwrap the Promise
+  const { lang } = React.use(params);
   const canvasRef = useRef(null);
+  const videoRef = useRef(null);
 
   const t = {
     en: {
@@ -181,6 +183,14 @@ export default function ServicesPage({ params }) {
     };
   }, []);
 
+  // Video background setup
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.playbackRate = 0.7; // Slow down the video for better effect
+    }
+  }, []);
+
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
     visible: (i = 1) => ({
@@ -192,10 +202,34 @@ export default function ServicesPage({ params }) {
 
   return (
     <section className="position-relative overflow-hidden text-white" style={{ background: "#0d1f4c" }}>
+      {/* Video Background */}
+      <div className="position-absolute top-0 start-0 w-100 h-100" style={{ zIndex: 0 }}>
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-100 h-100"
+          style={{ objectFit: "cover", opacity: 0.15 }}
+        >
+          <source src="/bg2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Dark overlay for better text readability */}
+        <div 
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{ 
+            background: "linear-gradient(135deg, rgba(13, 31, 76, 0.2) 0%, rgba(13, 31, 76, 0.08) 100%)",
+            zIndex: 1 
+          }}
+        ></div>
+      </div>
+
       {/* Hero Section */}
       <div className="text-center py-5 position-relative">
-        <canvas ref={canvasRef} className="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div className="position-relative z-10">
+        <canvas ref={canvasRef} className="position-absolute top-0 start-0 w-100 h-100" style={{ zIndex: 1 }}></canvas>
+        <div className="position-relative z-10" style={{ zIndex: 2 }}>
           <motion.h1 className="fw-bold display-4 mb-3" initial="hidden" animate="visible" variants={fadeUp}>
             {t.heroTitle}
           </motion.h1>
@@ -206,7 +240,7 @@ export default function ServicesPage({ params }) {
       </div>
 
       {/* Services Grid */}
-      <div className="container py-5 position-relative z-10">
+      <div className="container py-5 position-relative" style={{ zIndex: 2 }}>
         <h2 className="text-center mb-5 fw-bold text-warning">{t.servicesTitle}</h2>
         <div className="row g-4">
           {t.services.map((service, index) => (
@@ -217,6 +251,7 @@ export default function ServicesPage({ params }) {
                   backgroundColor: "rgba(255,255,255,0.1)",
                   color: "#fff",
                   transition: "all 0.3s ease",
+                  backdropFilter: "blur(10px)",
                 }}
                 initial="hidden"
                 whileInView="visible"
@@ -239,7 +274,8 @@ export default function ServicesPage({ params }) {
       <style jsx>{`
         .card:hover {
           transform: translateY(-10px) scale(1.03);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+          box-shadow: 0 8px 20px rgba(113, 109, 109, 0.3);
+          background-color: rgba(255,255,255,0.15) !important;
         }
       `}</style>
     </section>
